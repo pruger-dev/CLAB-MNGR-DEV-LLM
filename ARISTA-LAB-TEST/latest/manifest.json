@@ -1,0 +1,34 @@
+{
+  "backup_job_id": "d3e9c17ca16346328d38a20adba2a876",
+  "captured_at": "2026-09-12T19:11:09.273607+00:00",
+  "excluded_nodes": [],
+  "files": [
+    {
+      "format": "eos-running-config",
+      "node": "clab-ceos-pair-ceos1",
+      "path": "ceos1.cfg",
+      "platform": "arista_ceos",
+      "sha256": "16024ccc5b80c79b5b07ac0141d0b3c5975f5abaf4901f49bc804b219b2c3409",
+      "short_name": "ceos1",
+      "size": 1020
+    },
+    {
+      "format": "eos-running-config",
+      "node": "clab-ceos-pair-ceos2",
+      "path": "ceos2.cfg",
+      "platform": "arista_ceos",
+      "sha256": "e58f843d74a54043438a90eb03835375b2385dcb8b20f9a448f7631131dc0ebe",
+      "short_name": "ceos2",
+      "size": 1020
+    }
+  ],
+  "lab_id": "769ec022f2ad4df2b35d50181b24df15",
+  "lab_name": "ceos-pair",
+  "node_names": [
+    "clab-ceos-pair-ceos1",
+    "clab-ceos-pair-ceos2"
+  ],
+  "schema": 1,
+  "topology_digest": "aa1a7b3c4371cf85f8f52e6719d2d8a383b9c5438e4f9d8b8fd0828b8f6d3120",
+  "topology_provenance": "captured"
+}
