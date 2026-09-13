@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "7282d8d9658f4a388f17e09c72031e25",
-  "captured_at": "2026-09-13T01:25:22.551732+00:00",
+  "backup_job_id": "bacadacb42624a4e8efdeacb191aa88c",
+  "captured_at": "2026-09-13T12:03:30.982325+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -8,21 +8,21 @@
       "node": "clab-ceos-pair-ceos1",
       "path": "ceos1.cfg",
       "platform": "arista_ceos",
-      "sha256": "4dd6c59dfd1241db13686e72a697b149f64fc44cbf81c88de87addcaf99ef2cb",
+      "sha256": "d3002c7af6752092f2d70d2fe72f190b51e754d39fe2e13cc561300f1d559b26",
       "short_name": "ceos1",
-      "size": 1063
+      "size": 1020
     },
     {
       "format": "eos-running-config",
       "node": "clab-ceos-pair-ceos2",
       "path": "ceos2.cfg",
       "platform": "arista_ceos",
-      "sha256": "dfe86f4c07a67e9ec0a342ebbc0d34286b68887fc379570f5c994eb01b40d6c7",
+      "sha256": "23193b2a1242a6e2a696fa5254d98b741069a88fc24426e7cd1331377a557714",
       "short_name": "ceos2",
       "size": 1063
     }
   ],
-  "lab_id": "769ec022f2ad4df2b35d50181b24df15",
+  "lab_id": "b607612b2fbf4c4b8ae890f62d4e6ee4",
   "lab_name": "ceos-pair",
   "node_names": [
     "clab-ceos-pair-ceos1",
