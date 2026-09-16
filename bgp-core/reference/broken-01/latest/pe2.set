@@ -1,0 +1,23 @@
+set version 26.2R1.7-EVO
+set system host-name pe2
+set system root-authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system login user admin uid 500
+set system login user admin class superuser
+set system login user admin authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system services ssh
+set system services extension-service request-response grpc clear-text port 32767
+set interfaces et-0/0/0 unit 0 family inet address 10.12.0.2/30
+set interfaces lo0 unit 0 family inet address 10.0.0.2/32
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.5/24
+set policy-options policy-statement advertise-loopback term lo from protocol direct
+set policy-options policy-statement advertise-loopback term lo from route-filter 10.0.0.0/24 orlonger
+set policy-options policy-statement advertise-loopback term lo then accept
+set routing-options router-id 10.0.0.2
+set routing-options autonomous-system 65002
+set protocols bgp group to-peer type external
+set protocols bgp group to-peer export advertise-loopback
+set protocols bgp group to-peer peer-as 65001
+set protocols bgp group to-peer neighbor 10.12.0.1
