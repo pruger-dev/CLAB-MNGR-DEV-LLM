@@ -1,0 +1,32 @@
+{
+  "backup_job_id": "48a656f4c0fd463799cef57538ea3c95",
+  "captured_at": "2026-09-16T14:51:02.143186+00:00",
+  "excluded_nodes": [
+    "clab-clabllm-dev-SW1"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-clabllm-dev-PTX1",
+      "path": "PTX1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PTX1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "953f8a0e02da835d9fd7358b40ecef0c76b736785274bb592a4c77a0ebf6586e",
+      "restore_size": 1788,
+      "sha256": "b68857cdce38821b79481c546e49892bd83b7e49b709aecaaf79903f4b0df209",
+      "short_name": "PTX1",
+      "size": 1406
+    }
+  ],
+  "lab_id": "4faa9e1b0fda4dc280d7f618ec6508a2",
+  "lab_name": "clabllm-dev",
+  "node_names": [
+    "clab-clabllm-dev-PTX1"
+  ],
+  "restore_capable_nodes": 1,
+  "schema": 2,
+  "topology_digest": "eda5404623fe2e61e0b9f2491f288b24f64d7d9fce0594cfbe67f5004dbd0988",
+  "topology_provenance": "captured"
+}
