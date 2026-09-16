@@ -1,0 +1,45 @@
+{
+  "backup_job_id": "0d50a93d91454297bd480a68d1754406",
+  "captured_at": "2026-09-16T15:30:14.831444+00:00",
+  "excluded_nodes": [],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-bgp-core-pe1",
+      "path": "pe1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "pe1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "38fc8d9b9262ffb5aacc50a8f3c21eec55d4b92f73c2af5ce346e800492a91a0",
+      "restore_size": 1404,
+      "sha256": "d7934c963d22dd365d3beb8f1fa27fa2c176509b5d8603437b723cd9344351f6",
+      "short_name": "pe1",
+      "size": 903
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-bgp-core-pe2",
+      "path": "pe2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "pe2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "5a7cad4012dd22f7d80b4306b7b79a8ed7c36aa9bdcc0863e7dc8586dea832f1",
+      "restore_size": 1189,
+      "sha256": "60ebc94734eb3feadc59ea3bc011eeba7e7159e3353e601698be918bca0414dc",
+      "short_name": "pe2",
+      "size": 821
+    }
+  ],
+  "lab_id": "9381d223e85343b8bd08dcc999e42db0",
+  "lab_name": "bgp-core",
+  "node_names": [
+    "clab-bgp-core-pe1",
+    "clab-bgp-core-pe2"
+  ],
+  "restore_capable_nodes": 2,
+  "schema": 2,
+  "topology_digest": "450e9fc3bd579523c82b34cc003f8a846f2a1dfeddf2a2ac263b3fe02dd376dd",
+  "topology_provenance": "captured"
+}

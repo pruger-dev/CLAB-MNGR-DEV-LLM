@@ -1,0 +1,61 @@
+## Last commit: 2026-09-16 15:30:09 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name pe1;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port 32767;
+                    }
+                }
+            }
+        }
+    }
+}
+interfaces {
+    et-0/0/0 {
+        unit 0 {
+            family inet {
+                address 10.12.0.1/30;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.0.0.1/32;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.4/24;
+            }
+        }
+    }
+}
