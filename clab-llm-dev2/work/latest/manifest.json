@@ -1,0 +1,45 @@
+{
+  "backup_job_id": "cd8de51ab0f3486c82f07ab7edd4820f",
+  "captured_at": "2026-09-17T10:52:54.927356+00:00",
+  "excluded_nodes": [],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-clab-llm-dev2-PTX1",
+      "path": "PTX1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PTX1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "2718fbf54b0d365bf8983add8394079d3331b15585fffcf24f31cf12b730bfb3",
+      "restore_size": 841,
+      "sha256": "784e4c532a8f963ca62101b4f7feecc17bb2ffcbe5bce5f60384c7d24e24d313",
+      "short_name": "PTX1",
+      "size": 553
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-clab-llm-dev2-SW1",
+      "path": "SW1.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "80d076843a8a22222fdedb82688c0d5b464dc4f34e323e75a4d564b0424ab53b",
+      "restore_size": 1334,
+      "sha256": "54e673f30226dae6b6c842786d97b5b9765084ebf25c6ef44242d4321945428c",
+      "short_name": "SW1",
+      "size": 914
+    }
+  ],
+  "lab_id": "d8a8b61b7aee4b13ae8aa488f9ab3788",
+  "lab_name": "clab-llm-dev2",
+  "node_names": [
+    "clab-clab-llm-dev2-PTX1",
+    "clab-clab-llm-dev2-SW1"
+  ],
+  "restore_capable_nodes": 2,
+  "schema": 2,
+  "topology_digest": "266be72bdfe99ad60f4fb2473ed0501c7509441171351f9e2c75a32ab685f974",
+  "topology_provenance": "captured"
+}
