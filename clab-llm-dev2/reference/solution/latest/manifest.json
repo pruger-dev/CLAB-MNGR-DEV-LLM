@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "2a4fedccda744797a9710adfac809115",
-  "captured_at": "2026-09-17T11:07:33.279033+00:00",
+  "backup_job_id": "65f7f2bfc50e4d2c8995d0146f7aafc9",
+  "captured_at": "2026-09-17T12:33:52.454020+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -11,9 +11,9 @@
       "restore_artifact": "PTX1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "2f468b93f9e5ebf3af4ce997b0d228757d066d73d790a29eb5965b4f9ba4c901",
+      "restore_sha256": "9d7f73157f7086dff78366c8c8711cb2e91961e21d274dcc744b61c1d69cb282",
       "restore_size": 1520,
-      "sha256": "5630f8f0c76a6c726c38b7849dab7a4ac236eb0b3b40f4cb77407ea1ac93d4a3",
+      "sha256": "1eac4c31cf1e6e77d2a63ee20be64d743919a7279244987605b06ee421eb74d4",
       "short_name": "PTX1",
       "size": 1029
     },
@@ -25,9 +25,9 @@
       "restore_artifact": "SW1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "b34f826c4c2a78eda3408243436c69dfc42e3017474b56703f89481f318d89ff",
+      "restore_sha256": "5373dcefeaaa4b7ec53ea1b843a96f3bfb3a3762e85c5a5e70ea94513fa2b984",
       "restore_size": 1625,
-      "sha256": "c25332b1979dc4edf5ee700924ed7c9f61c06e78026b042a17629aa48d82c6e0",
+      "sha256": "d4840298cecba1549fe4527553999fc50005822ddf2514b59409ba3470129c05",
       "short_name": "SW1",
       "size": 1095
     }
@@ -40,6 +40,6 @@
   ],
   "restore_capable_nodes": 2,
   "schema": 2,
-  "topology_digest": "266be72bdfe99ad60f4fb2473ed0501c7509441171351f9e2c75a32ab685f974",
+  "topology_digest": "7da6609dbe0ad7820569b4390bbd48b4a0e06a20f17ca751999e5e6353575b8e",
   "topology_provenance": "captured"
 }

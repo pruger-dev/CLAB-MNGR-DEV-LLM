@@ -1,4 +1,4 @@
-## Last commit: 2026-09-17 11:06:44 UTC by admin
+## Last commit: 2026-09-17 12:32:40 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name PTX1;
@@ -55,7 +55,7 @@ interfaces {
     re0:mgmt-0 {
         unit 0 {
             family inet {
-                address 172.20.20.3/24;
+                address 172.20.20.2/24;
             }
         }
     }
