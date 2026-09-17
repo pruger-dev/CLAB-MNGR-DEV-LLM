@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "f323b53e5e354de6add3bcd6f7d8b5f8",
-  "captured_at": "2026-09-17T11:04:05.232258+00:00",
+  "backup_job_id": "2a4fedccda744797a9710adfac809115",
+  "captured_at": "2026-09-17T11:07:33.279033+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -11,11 +11,11 @@
       "restore_artifact": "PTX1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "2718fbf54b0d365bf8983add8394079d3331b15585fffcf24f31cf12b730bfb3",
-      "restore_size": 841,
-      "sha256": "784e4c532a8f963ca62101b4f7feecc17bb2ffcbe5bce5f60384c7d24e24d313",
+      "restore_sha256": "2f468b93f9e5ebf3af4ce997b0d228757d066d73d790a29eb5965b4f9ba4c901",
+      "restore_size": 1520,
+      "sha256": "5630f8f0c76a6c726c38b7849dab7a4ac236eb0b3b40f4cb77407ea1ac93d4a3",
       "short_name": "PTX1",
-      "size": 553
+      "size": 1029
     },
     {
       "format": "junos-display-set",
