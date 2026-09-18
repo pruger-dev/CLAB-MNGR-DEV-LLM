@@ -1,0 +1,63 @@
+{
+  "backup_job_id": "23656d8421ed47b79655ada4261742a1",
+  "captured_at": "2026-09-18T12:49:23.429921+00:00",
+  "excluded_nodes": [
+    "clab-l05-isis-H1",
+    "clab-l05-isis-H2"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-l05-isis-R1",
+      "path": "R1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "0ece93348d02e0081299f4638b931cd4b35ef1e6b4ff04d6fe9d8a3b134f62df",
+      "restore_size": 1885,
+      "sha256": "34e2a3cf32192084f1c4efa5ed47dbd7ebe8cb8d7148e4560da0e1d28142e5f6",
+      "short_name": "R1",
+      "size": 1322
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l05-isis-R2",
+      "path": "R2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "66c5f4037020900403890acfca6da0ef96802327020ad4a04bf9bdec3c2f29d7",
+      "restore_size": 1511,
+      "sha256": "a06781ed812cb4295ccae0a9e1cadcd4697a516675c68c0871ee170fb502ab80",
+      "short_name": "R2",
+      "size": 1128
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l05-isis-R3",
+      "path": "R3.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R3.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "9fdfef982d2a8cd068ef9f82e964c0eaf7ff9ee34898de0fbe65de17312359a6",
+      "restore_size": 1885,
+      "sha256": "90a230be37233d22e6bcddb33ff516dfdc6c7ec16522c6e65ee994920aa759c6",
+      "short_name": "R3",
+      "size": 1322
+    }
+  ],
+  "lab_id": "402ceec154f44b249a3d3017cc22509a",
+  "lab_name": "l05-isis",
+  "node_names": [
+    "clab-l05-isis-R1",
+    "clab-l05-isis-R2",
+    "clab-l05-isis-R3"
+  ],
+  "restore_capable_nodes": 3,
+  "schema": 2,
+  "topology_digest": "cd6301e862f838f78ea2aabcd8c207236681767f309a46c560c35ff439df80dd",
+  "topology_provenance": "captured"
+}
