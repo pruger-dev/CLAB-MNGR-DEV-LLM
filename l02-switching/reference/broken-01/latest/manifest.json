@@ -1,0 +1,64 @@
+{
+  "backup_job_id": "64f904b0c5ff4e40b617ba2db06b691d",
+  "captured_at": "2026-09-18T10:28:17.483318+00:00",
+  "excluded_nodes": [
+    "clab-l02-switching-H1",
+    "clab-l02-switching-H2",
+    "clab-l02-switching-H3"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-l02-switching-SW1",
+      "path": "SW1.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "d422491be5ae90b845df0a22940ea0f1e7026a21a38de1458064701fbfb3eaf2",
+      "restore_size": 2265,
+      "sha256": "0828e2a1408e0ba7e022e83cbf616a39a25b0e755268cdd928de260bd11bfe6c",
+      "short_name": "SW1",
+      "size": 1677
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l02-switching-SW2",
+      "path": "SW2.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "ede695aa42630a267463d188ec4a973a12e776771f42da565b922e44b615ff61",
+      "restore_size": 2220,
+      "sha256": "f29cb3222b02734d2da1173b0b9ba9f44a75f4dcd6724ec099a42c5e6bdaa54a",
+      "short_name": "SW2",
+      "size": 1606
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l02-switching-SW3",
+      "path": "SW3.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW3.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "333825a8bd9076f3b69233d02f73112b7b60f0d7c10452e00c44107db4df17d9",
+      "restore_size": 1820,
+      "sha256": "6afaf1eba88b1e44bb2ef937ab63aa9e78907dab9c501c2c9f816fa2698f5df6",
+      "short_name": "SW3",
+      "size": 1331
+    }
+  ],
+  "lab_id": "59dc0f04e6a44430aa73cb4eddf2a356",
+  "lab_name": "l02-switching",
+  "node_names": [
+    "clab-l02-switching-SW1",
+    "clab-l02-switching-SW2",
+    "clab-l02-switching-SW3"
+  ],
+  "restore_capable_nodes": 3,
+  "schema": 2,
+  "topology_digest": "353d86e1d2469e856a29658053bc681a3783b4c9f38f7f05bfbc4ea65d96bcee",
+  "topology_provenance": "captured"
+}

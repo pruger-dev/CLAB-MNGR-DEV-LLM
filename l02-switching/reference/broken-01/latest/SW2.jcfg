@@ -1,0 +1,107 @@
+## Last commit: 2026-09-18 10:26:08 UTC by admin
+version 23.2R1.14;
+system {
+    host-name SW2;
+    root-authentication {
+        encrypted-password "$6$PTuRl35E$.9CK8V0pR4QdyqOGVjkklW8hH7EXGRXxrIC/Bytskpduykng5ZkIJqgmLf3z3N/1T9YINT5RvOrnoY0bFYlW00"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$6$U5PUNAGV$yCnd2JzBMogWsw/Hn0n4/SmYAyzTcwGspF4h90joMDo6rd4efEFqozajIxpn8BdAzdpkTJeXIilUtparMu7du/"; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        ssh {
+            root-login allow;
+        }
+        netconf {
+            ssh;
+        }
+    }
+    management-instance;
+}
+chassis {
+    aggregated-devices {
+        ethernet {
+            device-count 1;
+        }
+    }
+    fpc 0 {
+        pic 0 {
+            number-of-ports 56;
+        }
+    }
+}
+interfaces {
+    ge-0/0/0 {
+        description H2;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/8 {
+        description "to SW1 (link A)";
+        ether-options {
+            802.3ad ae0;
+        }
+    }
+    ge-0/0/9 {
+        description "to SW1 (link B)";
+        ether-options {
+            802.3ad ae0;
+        }
+    }
+    ge-0/0/11 {
+        description "to SW3";
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ae0 {
+        description "LAG to SW1";
+        aggregated-ether-options {
+            lacp {
+                passive;
+            }
+        }
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    fxp0 {
+        unit 0 {
+            family inet {
+                address 10.0.0.15/24;
+            }
+            family inet6 {
+                address 2001:db8::2/64;
+            }
+        }
+    }
+}
+routing-instances {
+    mgmt_junos {
+        routing-options {
+            rib mgmt_junos.inet6.0 {
+                static {
+                    route ::/0 next-hop 2001:db8::1;
+                }
+            }
+            static {
+                route 0.0.0.0/0 next-hop 10.0.0.2;
+            }
+        }
+    }
+}
+protocols {
+    rstp {
+        interface ge-0/0/0 {
+            edge;
+        }
+        interface all;
+    }
+}

@@ -1,0 +1,28 @@
+set version 23.2R1.14
+set system host-name SW2
+set system root-authentication encrypted-password "$6$PTuRl35E$.9CK8V0pR4QdyqOGVjkklW8hH7EXGRXxrIC/Bytskpduykng5ZkIJqgmLf3z3N/1T9YINT5RvOrnoY0bFYlW00"
+set system login user admin uid 2000
+set system login user admin class super-user
+set system login user admin authentication encrypted-password "$6$U5PUNAGV$yCnd2JzBMogWsw/Hn0n4/SmYAyzTcwGspF4h90joMDo6rd4efEFqozajIxpn8BdAzdpkTJeXIilUtparMu7du/"
+set system services ssh root-login allow
+set system services netconf ssh
+set system management-instance
+set chassis aggregated-devices ethernet device-count 1
+set chassis fpc 0 pic 0 number-of-ports 56
+set interfaces ge-0/0/0 description H2
+set interfaces ge-0/0/0 unit 0 family ethernet-switching
+set interfaces ge-0/0/8 description "to SW1 (link A)"
+set interfaces ge-0/0/8 ether-options 802.3ad ae0
+set interfaces ge-0/0/9 description "to SW1 (link B)"
+set interfaces ge-0/0/9 ether-options 802.3ad ae0
+set interfaces ge-0/0/11 description "to SW3"
+set interfaces ge-0/0/11 unit 0 family ethernet-switching
+set interfaces ae0 description "LAG to SW1"
+set interfaces ae0 aggregated-ether-options lacp passive
+set interfaces ae0 unit 0 family ethernet-switching
+set interfaces fxp0 unit 0 family inet address 10.0.0.15/24
+set interfaces fxp0 unit 0 family inet6 address 2001:db8::2/64
+set routing-instances mgmt_junos routing-options rib mgmt_junos.inet6.0 static route ::/0 next-hop 2001:db8::1
+set routing-instances mgmt_junos routing-options static route 0.0.0.0/0 next-hop 10.0.0.2
+set protocols rstp interface ge-0/0/0 edge
+set protocols rstp interface all
