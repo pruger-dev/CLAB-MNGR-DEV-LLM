@@ -1,0 +1,101 @@
+## Last commit: 2026-09-18 13:51:39 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name PE2;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port 32767;
+                    }
+                }
+            }
+        }
+    }
+}
+interfaces {
+    et-0/0/0 {
+        description "to P2";
+        unit 0 {
+            family inet {
+                address 10.6.34.1/31;
+            }
+            family iso;
+            family mpls;
+        }
+    }
+    et-0/0/1 {
+        description "to H2 (customer)";
+        encapsulation ethernet-ccc;
+        unit 0 {
+            family ccc;
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.6.0.4/32;
+            }
+            family iso {
+                address 49.0001.0000.0000.0004.00;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.114/24;
+            }
+        }
+    }
+}
+protocols {
+    isis {
+        interface et-0/0/0.0 {
+            point-to-point;
+        }
+        interface lo0.0 {
+            passive;
+        }
+        source-packet-routing {
+            srgb start-label 16000 index-range 8000;
+        }
+        level 1 disable;
+    }
+    l2circuit {
+        neighbor 10.6.0.1 {
+            interface et-0/0/1.0 {
+                virtual-circuit-id 101;
+            }
+        }
+    }
+    ldp {
+        interface lo0.0;
+    }
+    mpls {
+        interface et-0/0/0.0;
+    }
+}

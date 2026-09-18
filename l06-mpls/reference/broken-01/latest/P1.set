@@ -1,0 +1,31 @@
+set version 26.2R1.7-EVO
+set system host-name P1
+set system root-authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system login user admin uid 500
+set system login user admin class superuser
+set system login user admin authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system services ssh
+set system services extension-service request-response grpc clear-text port 32767
+set interfaces et-0/0/0 description "to PE1"
+set interfaces et-0/0/0 unit 0 family inet address 10.6.12.1/31
+set interfaces et-0/0/0 unit 0 family iso
+set interfaces et-0/0/0 unit 0 family mpls
+set interfaces et-0/0/1 description "to P2"
+set interfaces et-0/0/1 unit 0 family inet address 10.6.23.0/31
+set interfaces et-0/0/1 unit 0 family iso
+set interfaces lo0 unit 0 family inet address 10.6.0.2/32
+set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0002.00
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.112/24
+set protocols isis interface et-0/0/0.0 point-to-point
+set protocols isis interface et-0/0/1.0 point-to-point
+set protocols isis interface lo0.0 passive
+set protocols isis source-packet-routing srgb start-label 16000
+set protocols isis source-packet-routing srgb index-range 8000
+set protocols isis source-packet-routing node-segment ipv4-index 2
+set protocols isis level 1 disable
+set protocols ldp interface lo0.0
+set protocols mpls interface et-0/0/0.0
+set protocols mpls interface et-0/0/1.0
