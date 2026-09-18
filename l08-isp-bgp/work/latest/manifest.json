@@ -1,0 +1,77 @@
+{
+  "backup_job_id": "bff8ff8226b643c1a0f1ed740394fdd0",
+  "captured_at": "2026-09-18T15:22:53.086165+00:00",
+  "excluded_nodes": [
+    "clab-l08-isp-bgp-H1"
+  ],
+  "files": [
+    {
+      "format": "eos-running-config",
+      "node": "clab-l08-isp-bgp-CUST",
+      "path": "CUST.cfg",
+      "platform": "arista_ceos",
+      "sha256": "77b720db779d4b3f642bf3f94945b47f584ae5c3b74aa87f3063d0f0bb66c1b1",
+      "short_name": "CUST",
+      "size": 1433
+    },
+    {
+      "format": "eos-running-config",
+      "node": "clab-l08-isp-bgp-ISP-A",
+      "path": "ISP-A.cfg",
+      "platform": "arista_ceos",
+      "sha256": "767fd95a3960e732cf7dcc0211790e333b79ad7edd113f88f3a32eb8864c143c",
+      "short_name": "ISP-A",
+      "size": 1537
+    },
+    {
+      "format": "eos-running-config",
+      "node": "clab-l08-isp-bgp-ISP-B",
+      "path": "ISP-B.cfg",
+      "platform": "arista_ceos",
+      "sha256": "33f44affa698c1bf5c528e6a67527078ab00c2924b0a302a7d91e02271128af4",
+      "short_name": "ISP-B",
+      "size": 1540
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l08-isp-bgp-R1",
+      "path": "R1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "63af05243f07a6547d42da2daea776acdc937828e00452f152277ae5a12348b1",
+      "restore_size": 3498,
+      "sha256": "ba17fff52864e1e7d05fc80883387f072dd2f88bf1b4c5e75fd60598aeee0c63",
+      "short_name": "R1",
+      "size": 3127
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l08-isp-bgp-R2",
+      "path": "R2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "e2fba8d90abbd9c763433d2fc89ed1b0071998e099b96fef4cc00fb9e84fd9c5",
+      "restore_size": 5282,
+      "sha256": "65b88deba3520605935b30e2543c2af446b8108067014310c10e7dd8c4d25071",
+      "short_name": "R2",
+      "size": 4878
+    }
+  ],
+  "lab_id": "37e5b83222214c80b456512a06be8484",
+  "lab_name": "l08-isp-bgp",
+  "node_names": [
+    "clab-l08-isp-bgp-CUST",
+    "clab-l08-isp-bgp-ISP-A",
+    "clab-l08-isp-bgp-ISP-B",
+    "clab-l08-isp-bgp-R1",
+    "clab-l08-isp-bgp-R2"
+  ],
+  "restore_capable_nodes": 2,
+  "schema": 2,
+  "topology_digest": "e2be337efe4028ec84233fb301abc042102127d8f776e22b00289c738227ae11",
+  "topology_provenance": "captured"
+}
