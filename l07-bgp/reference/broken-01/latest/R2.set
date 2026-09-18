@@ -18,7 +18,7 @@ set interfaces et-0/0/2 description "LAN (H1)"
 set interfaces et-0/0/2 unit 0 family inet address 10.7.1.1/24
 set interfaces lo0 unit 0 family inet address 10.7.0.2/32
 set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0002.00
-set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.132/24
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.192/24
 set policy-options policy-statement export-ours term ours from protocol aggregate
 set policy-options policy-statement export-ours term ours from route-filter 10.7.0.0/16 exact
 set policy-options policy-statement export-ours term ours then accept

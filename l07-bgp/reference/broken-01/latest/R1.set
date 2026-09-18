@@ -16,7 +16,7 @@ set interfaces et-0/0/1 description "to ISP-A (AS 65001)"
 set interfaces et-0/0/1 unit 0 family inet address 172.16.1.1/31
 set interfaces lo0 unit 0 family inet address 10.7.0.1/32
 set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0001.00
-set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.131/24
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.191/24
 set policy-options policy-statement export-ours term ours from protocol aggregate
 set policy-options policy-statement export-ours term ours from route-filter 10.7.0.0/16 exact
 set policy-options policy-statement export-ours term ours then accept
