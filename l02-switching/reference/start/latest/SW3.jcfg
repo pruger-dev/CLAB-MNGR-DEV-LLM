@@ -1,0 +1,77 @@
+## Last commit: 2026-09-18 10:11:19 UTC by admin
+version 23.2R1.14;
+system {
+    host-name SW3;
+    root-authentication {
+        encrypted-password "$6$UB6oslFb$QZGfyLskpSa.Gn87mLNUuLjw.c99hYslyVaTJ4NuxbTlWFaLyHFR/QLFL37IGGaC//SZHGAKkJzifDg5ChNRK1"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$6$DdCcnh1g$Lxp6fmnfw6n3t6ivXUA/vI6rbi6.O1GfrZjpFqSNzQV6N9rrV5CzEKqINkvkSOLWGZTP4iCY/v/RinZg0O5Bt0"; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        ssh {
+            root-login allow;
+        }
+        netconf {
+            ssh;
+        }
+    }
+    management-instance;
+}
+chassis {
+    fpc 0 {
+        pic 0 {
+            number-of-ports 56;
+        }
+    }
+}
+interfaces {
+    ge-0/0/0 {
+        description H3;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/10 {
+        description "to SW1";
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/11 {
+        description "to SW2";
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    fxp0 {
+        unit 0 {
+            family inet {
+                address 10.0.0.15/24;
+            }
+            family inet6 {
+                address 2001:db8::2/64;
+            }
+        }
+    }
+}
+routing-instances {
+    mgmt_junos {
+        routing-options {
+            rib mgmt_junos.inet6.0 {
+                static {
+                    route ::/0 next-hop 2001:db8::1;
+                }
+            }
+            static {
+                route 0.0.0.0/0 next-hop 10.0.0.2;
+            }
+        }
+    }
+}

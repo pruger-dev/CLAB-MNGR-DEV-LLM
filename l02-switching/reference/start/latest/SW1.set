@@ -1,0 +1,23 @@
+set version 23.2R1.14
+set system host-name SW1
+set system root-authentication encrypted-password "$6$VCv6aoxr$runEq7qnxCy75tuyqAD9uVOZ3S9q/1GTMMGfjnhalUZdZ4SGc3cZET097/lBqWDWqW9dyKaJdGHz9keA.lzxS1"
+set system login user admin uid 2000
+set system login user admin class super-user
+set system login user admin authentication encrypted-password "$6$2MF7Zc5.$4TIDIvN5EhWekIiu5Lfpe4uaLRWlOHsLz6FsEuU8hjkxolV1q8TZ0.t887V0LnHjukZNbRjqyDN1LmYSsgQlc0"
+set system services ssh root-login allow
+set system services netconf ssh
+set system management-instance
+set chassis fpc 0 pic 0 number-of-ports 56
+set interfaces ge-0/0/0 description H1
+set interfaces ge-0/0/0 unit 0 family ethernet-switching
+set interfaces ge-0/0/8 description "to SW2 (link A)"
+set interfaces ge-0/0/8 unit 0 family ethernet-switching
+set interfaces ge-0/0/9 description "to SW2 (link B)"
+set interfaces ge-0/0/9 disable
+set interfaces ge-0/0/9 unit 0 family ethernet-switching
+set interfaces ge-0/0/10 description "to SW3"
+set interfaces ge-0/0/10 unit 0 family ethernet-switching
+set interfaces fxp0 unit 0 family inet address 10.0.0.15/24
+set interfaces fxp0 unit 0 family inet6 address 2001:db8::2/64
+set routing-instances mgmt_junos routing-options rib mgmt_junos.inet6.0 static route ::/0 next-hop 2001:db8::1
+set routing-instances mgmt_junos routing-options static route 0.0.0.0/0 next-hop 10.0.0.2
