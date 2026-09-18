@@ -1,4 +1,4 @@
-## Last commit: 2026-09-18 15:34:29 UTC by admin
+## Last commit: 2026-09-18 20:41:35 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name R1;
@@ -67,7 +67,7 @@ interfaces {
     re0:mgmt-0 {
         unit 0 {
             family inet {
-                address 172.20.20.131/24;
+                address 172.20.20.191/24;
             }
         }
     }
