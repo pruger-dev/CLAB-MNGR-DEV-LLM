@@ -1,0 +1,101 @@
+## Last commit: 2026-09-18 01:21:06 UTC by admin
+version 23.2R1.14;
+system {
+    host-name SW1;
+    root-authentication {
+        encrypted-password "$6$uQPf08iE$1smLm0.CR8RgOO0v/VYQ8P7V6jRJCQv5YrUrENe5mxD6t.HWJFXvMdE6tD57ya4IYK8e45MCYzHcrI7aW0ZmN/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$6$/wkZdELs$P7e1h70m3FMSFAJMn/iaHhKHr3vTPEvESZylCTA9upG.IvoISJwJQbu99TLrjPtIJcDqIMWXgR93SAd0..4xt/"; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        ssh {
+            root-login allow;
+        }
+        netconf {
+            ssh;
+        }
+    }
+    management-instance;
+}
+chassis {
+    fpc 0 {
+        pic 0 {
+            number-of-ports 56;
+        }
+    }
+}
+interfaces {
+    ge-0/0/0 {
+        description H1;
+        unit 0 {
+            family ethernet-switching {
+                interface-mode access;
+                vlan {
+                    members students-a;
+                }
+            }
+        }
+    }
+    ge-0/0/1 {
+        description H2;
+        unit 0 {
+            family ethernet-switching {
+                interface-mode access;
+                vlan {
+                    members students-b;
+                }
+            }
+        }
+    }
+    ge-0/0/9 {
+        description "uplink to SW2";
+        mtu 1400;
+        unit 0 {
+            family ethernet-switching {
+                interface-mode trunk;
+                vlan {
+                    members [ students-a students-b ];
+                }
+            }
+        }
+    }
+    fxp0 {
+        unit 0 {
+            family inet {
+                address 10.0.0.15/24;
+            }
+            family inet6 {
+                address 2001:db8::2/64;
+            }
+        }
+    }
+}
+routing-instances {
+    mgmt_junos {
+        routing-options {
+            rib mgmt_junos.inet6.0 {
+                static {
+                    route ::/0 next-hop 2001:db8::1;
+                }
+            }
+            static {
+                route 0.0.0.0/0 next-hop 10.0.0.2;
+            }
+        }
+    }
+}
+vlans {
+    students-a {
+        vlan-id 10;
+    }
+    students-b {
+        vlan-id 20;
+    }
+}
