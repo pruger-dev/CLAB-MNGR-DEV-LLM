@@ -1,0 +1,50 @@
+{
+  "backup_job_id": "b1a9aefa3ab6455aac6a1e61c0566799",
+  "captured_at": "2026-09-18T02:13:22.916372+00:00",
+  "excluded_nodes": [
+    "clab-l01-ethernet-H1",
+    "clab-l01-ethernet-H2",
+    "clab-l01-ethernet-H3",
+    "clab-l01-ethernet-H4"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-l01-ethernet-SW1",
+      "path": "SW1.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "95baf01fba4fb7eeded149a67c3cdb09dbe94e9f36758597964078a95417f395",
+      "restore_size": 2196,
+      "sha256": "ab4f147dc4ac3b305b3a9e1b9f034da5d9ce04e74e3f176200819f9f1e3bc26a",
+      "short_name": "SW1",
+      "size": 1668
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l01-ethernet-SW2",
+      "path": "SW2.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "645a3c22ae1b3cd19864ecd1074f252d9af495690ece615ae9c5f9983f0e2501",
+      "restore_size": 2196,
+      "sha256": "1adac593d582b474b9d0c697ed0a3610b3708cf4eff1e952de79a580316024fd",
+      "short_name": "SW2",
+      "size": 1668
+    }
+  ],
+  "lab_id": "0ca9f82eb4bf41ef96038e8ec607550d",
+  "lab_name": "l01-ethernet",
+  "node_names": [
+    "clab-l01-ethernet-SW1",
+    "clab-l01-ethernet-SW2"
+  ],
+  "restore_capable_nodes": 2,
+  "schema": 2,
+  "topology_digest": "32ce1e3fc1751edc0837a4665208a74ac015a3a911e363df17e727cdc1e53505",
+  "topology_provenance": "captured"
+}
