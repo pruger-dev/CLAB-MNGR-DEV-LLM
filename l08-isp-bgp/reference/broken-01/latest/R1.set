@@ -24,9 +24,9 @@ set policy-options policy-statement from-ISP-A term all then local-preference 20
 set policy-options policy-statement from-ISP-A term all then community add transit
 set policy-options policy-statement from-ISP-A term all then accept
 set policy-options policy-statement next-hop-self term ibgp then next-hop self
-set policy-options policy-statement to-ISP term own from protocol aggregate
+set policy-options policy-statement to-ISP term own from protocol direct
 set policy-options policy-statement to-ISP term own from route-filter 10.8.0.0/16 exact
-set policy-options policy-statement to-ISP term own then community add transit
+set policy-options policy-statement to-ISP term own then community add own
 set policy-options policy-statement to-ISP term own then accept
 set policy-options policy-statement to-ISP term customer from community customer
 set policy-options policy-statement to-ISP term customer then accept

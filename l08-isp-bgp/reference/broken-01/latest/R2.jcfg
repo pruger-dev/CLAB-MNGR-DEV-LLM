@@ -1,4 +1,4 @@
-## Last commit: 2026-09-18 15:23:50 UTC by admin
+## Last commit: 2026-09-18 15:29:51 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name R2;
@@ -115,18 +115,10 @@ policy-options {
             then reject;
         }
     }
-    policy-statement from-ISP-A-typo {
-        term all {
-            then {
-                local-preference 300;
-                community add transit;
-                accept;
-            }
-        }
-    }
     policy-statement from-ISP-B {
         term all {
             then {
+                local-preference 300;
                 community add transit;
                 accept;
             }
@@ -209,7 +201,7 @@ protocols {
         }
         group ISP-B {
             type external;
-            import [ from-ISP-B from-ISP-A-typo ];
+            import from-ISP-B;
             export [ to-ISP-B to-ISP ];
             peer-as 65002;
             neighbor 172.16.2.0;

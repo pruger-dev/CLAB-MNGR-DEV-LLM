@@ -1,4 +1,4 @@
-## Last commit: 2026-09-18 15:23:38 UTC by admin
+## Last commit: 2026-09-18 15:29:40 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name R1;
@@ -101,11 +101,11 @@ policy-options {
     policy-statement to-ISP {
         term own {
             from {
-                protocol aggregate;
+                protocol direct;
                 route-filter 10.8.0.0/16 exact;
             }
             then {
-                community add transit;
+                community add own;
                 accept;
             }
         }

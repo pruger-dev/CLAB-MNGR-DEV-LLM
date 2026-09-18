@@ -29,9 +29,7 @@ set policy-options policy-statement from-CUST term theirs from prefix-list custo
 set policy-options policy-statement from-CUST term theirs then community add customer
 set policy-options policy-statement from-CUST term theirs then accept
 set policy-options policy-statement from-CUST term rest then reject
-set policy-options policy-statement from-ISP-A-typo term all then local-preference 300
-set policy-options policy-statement from-ISP-A-typo term all then community add transit
-set policy-options policy-statement from-ISP-A-typo term all then accept
+set policy-options policy-statement from-ISP-B term all then local-preference 300
 set policy-options policy-statement from-ISP-B term all then community add transit
 set policy-options policy-statement from-ISP-B term all then accept
 set policy-options policy-statement next-hop-self term ibgp then next-hop self
@@ -64,7 +62,6 @@ set protocols bgp group internal export next-hop-self
 set protocols bgp group internal neighbor 10.8.0.1
 set protocols bgp group ISP-B type external
 set protocols bgp group ISP-B import from-ISP-B
-set protocols bgp group ISP-B import from-ISP-A-typo
 set protocols bgp group ISP-B export to-ISP-B
 set protocols bgp group ISP-B export to-ISP
 set protocols bgp group ISP-B peer-as 65002

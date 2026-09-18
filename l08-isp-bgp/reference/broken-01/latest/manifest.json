@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "3dbf71370fd0453485a0841f52c1c930",
-  "captured_at": "2026-09-18T15:24:44.245771+00:00",
+  "backup_job_id": "e67d00e0415149fc91e530d9e018668d",
+  "captured_at": "2026-09-18T15:30:51.189904+00:00",
   "excluded_nodes": [
     "clab-l08-isp-bgp-H1"
   ],
@@ -40,11 +40,11 @@
       "restore_artifact": "R1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "b2a6e30732b45035a9e96d635d18f3f92fb42f330e92668b3bc52abe749fb116",
-      "restore_size": 3502,
-      "sha256": "cfcfbb9aeaa89e720c87930fc92ed15b55c1f45f7b0681cd0a53b2fc46c2058e",
+      "restore_sha256": "56e053bb383bcfb79c78d0a382d6ebfa41525cd976df7794abb024fc6260640c",
+      "restore_size": 3495,
+      "sha256": "6a22becf64d081450f8b0da337eaae7ffd115032343c50072aa9b3def30e402a",
       "short_name": "R1",
-      "size": 3131
+      "size": 3124
     },
     {
       "format": "junos-display-set",
@@ -54,11 +54,11 @@
       "restore_artifact": "R2.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "41329ced1931cd0faed547ee1414ee18f30eb0a03c1176529e8512555e9a3179",
-      "restore_size": 5510,
-      "sha256": "bf2d78c015686ee5ad4ea6f53a1ae71cd877946107512de418f3e6896e4200ea",
+      "restore_sha256": "99e75ec2b4144fc85e4801bffcda413d7e721ab803a46baff99d3dcd47997563",
+      "restore_size": 5320,
+      "sha256": "02e17f2f00344b00556fe33a09daa8f52f72239ab457e55778a93031a0b9090b",
       "short_name": "R2",
-      "size": 5179
+      "size": 4960
     }
   ],
   "lab_id": "37e5b83222214c80b456512a06be8484",
