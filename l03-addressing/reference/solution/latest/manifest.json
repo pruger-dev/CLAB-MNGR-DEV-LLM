@@ -1,0 +1,49 @@
+{
+  "backup_job_id": "8941c5091caf415dbad993d815026122",
+  "captured_at": "2026-09-18T11:22:32.242567+00:00",
+  "excluded_nodes": [
+    "clab-l03-addressing-H1",
+    "clab-l03-addressing-H2",
+    "clab-l03-addressing-H3"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-l03-addressing-R1",
+      "path": "R1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "93d025ca598cf01ee07956e7ed69bda6b369e074c1d33035d2bab47b0c601635",
+      "restore_size": 1650,
+      "sha256": "da5dbafaeb2e3623be98275a4a312344c4e281a21b161ece1667a7bc9901ecd0",
+      "short_name": "R1",
+      "size": 1132
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l03-addressing-R2",
+      "path": "R2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "1ddb0d0dd5343ba302ff90722a623ce155b0e77c227a05852dcf3530b4bc6053",
+      "restore_size": 1487,
+      "sha256": "c2e8d0225c6bd959f1fc63591e2499c79c53bee5673d059fa30e3e4777d824d3",
+      "short_name": "R2",
+      "size": 1016
+    }
+  ],
+  "lab_id": "95a62469d10246c2a46be953eb3a1e12",
+  "lab_name": "l03-addressing",
+  "node_names": [
+    "clab-l03-addressing-R1",
+    "clab-l03-addressing-R2"
+  ],
+  "restore_capable_nodes": 2,
+  "schema": 2,
+  "topology_digest": "289476df4d45f262d0cad9526b4567c4c8764ec52f08d02f823e99b263f37cb4",
+  "topology_provenance": "captured"
+}
