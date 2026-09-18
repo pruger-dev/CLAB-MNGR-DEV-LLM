@@ -1,0 +1,64 @@
+{
+  "backup_job_id": "bff8a7266728470080f1901983f2889f",
+  "captured_at": "2026-09-18T12:16:27.772670+00:00",
+  "excluded_nodes": [
+    "clab-l04-packet-H1",
+    "clab-l04-packet-H2",
+    "clab-l04-packet-H3"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-l04-packet-R1",
+      "path": "R1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "f2a99985b931f608dc8931bee02114aecc4583bf760160da0d01035ca7b3d7dc",
+      "restore_size": 1272,
+      "sha256": "796e0073f359761ec2a35ae56deaeecea8af7cb37de375eeaab42248fd113b4d",
+      "short_name": "R1",
+      "size": 934
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l04-packet-R2",
+      "path": "R2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "R2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "14dc80b14f17f9c75fd8da121b23ca45a498edad8935930617678b5ab6b56511",
+      "restore_size": 1272,
+      "sha256": "061b461c061d0f1aaa4e24851ec64b50dfe67d50b15cd1516301e15ede1666d1",
+      "short_name": "R2",
+      "size": 934
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l04-packet-SW1",
+      "path": "SW1.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "SW1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "0e2b61efcfbc00a8c0b37b8e6915a9bec7052b83a1b236d64f7d5027fd867bcd",
+      "restore_size": 1680,
+      "sha256": "e7208e89ecc873e44bd0e948def13c787428976ca67400d37c4d438f2011c82e",
+      "short_name": "SW1",
+      "size": 1214
+    }
+  ],
+  "lab_id": "ceac258c41af47d4a5f172d62c756dae",
+  "lab_name": "l04-packet",
+  "node_names": [
+    "clab-l04-packet-R1",
+    "clab-l04-packet-R2",
+    "clab-l04-packet-SW1"
+  ],
+  "restore_capable_nodes": 3,
+  "schema": 2,
+  "topology_digest": "5dda8191c714fe2784870c6abbbfe5b243d4c7e6a406fec58a8b875fd44edd4f",
+  "topology_provenance": "captured"
+}
