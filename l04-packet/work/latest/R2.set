@@ -1,0 +1,17 @@
+set version 26.2R1.7-EVO
+set system host-name R2
+set system root-authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system login user admin uid 500
+set system login user admin class superuser
+set system login user admin authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system services ssh
+set system services extension-service request-response grpc clear-text port 32767
+set interfaces et-0/0/0 description "link to R1"
+set interfaces et-0/0/0 unit 0 family inet address 192.168.40.113/31
+set interfaces et-0/0/1 description "LAN C (H3)"
+set interfaces et-0/0/1 unit 0 family inet address 192.168.40.97/28
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.73/24
+set routing-options static route 192.168.40.0/26 next-hop 192.168.40.112
