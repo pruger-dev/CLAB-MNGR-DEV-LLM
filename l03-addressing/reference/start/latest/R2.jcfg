@@ -1,7 +1,10 @@
-## Last commit: 2026-09-18 11:14:09 UTC by root
+## Last commit: 2026-09-18 11:18:21 UTC by admin
 version 26.2R1.7-EVO;
 system {
-    host-name HOSTNAME;
+    host-name R2;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
     login {
         user admin {
             uid 500;
@@ -23,9 +26,20 @@ system {
     services {
         ssh;
     }
-    ## Warning: missing mandatory statement(s): 'root-authentication'
 }
 interfaces {
+    et-0/0/0 {
+        description "link to R1";
+        unit 0 {
+            family inet;
+        }
+    }
+    et-0/0/1 {
+        description "LAN C (H3)";
+        unit 0 {
+            family inet;
+        }
+    }
     re0:mgmt-0 {
         unit 0 {
             family inet {
