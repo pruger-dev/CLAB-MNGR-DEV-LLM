@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "b0f19929c7d14c21bed0cab0cca0d1ca",
-  "captured_at": "2026-09-18T15:30:25.062564+00:00",
+  "backup_job_id": "103ae384e2e747b1845f2cff46fb4f95",
+  "captured_at": "2026-09-18T20:31:57.873288+00:00",
   "excluded_nodes": [
     "clab-l07-bgp-H1"
   ],
@@ -10,7 +10,7 @@
       "node": "clab-l07-bgp-CUST",
       "path": "CUST.cfg",
       "platform": "arista_ceos",
-      "sha256": "11a99e821f2b0ae7536b6a2f8e43cbe2e286aa7b41f9c7c72199518eb1002d8c",
+      "sha256": "0a220fb6db0ee803fda87df897a3ea3e6303010cfddaec3faff5f7b13f5eb861",
       "short_name": "CUST",
       "size": 1316
     },
@@ -19,7 +19,7 @@
       "node": "clab-l07-bgp-ISP-A",
       "path": "ISP-A.cfg",
       "platform": "arista_ceos",
-      "sha256": "0b825d40dc13f29fc1c5da6dff46970714215a7bad79578230c08be045f68238",
+      "sha256": "68d54bc8e112536c5bfd916693a9034aba5703370788a4f24fb11842c2227134",
       "short_name": "ISP-A",
       "size": 1449
     },
@@ -31,9 +31,9 @@
       "restore_artifact": "R1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "4c924d268129c7658ecd024649c9dd17ca1f4ed0914f4c1c5c3b2fcb995f669d",
+      "restore_sha256": "0f21de1d11eccdb8a20159f986dfb70b40ddd0c553f2cf45d20d9c24d92f992e",
       "restore_size": 1900,
-      "sha256": "fdc81fb43eeeb72d4e21105407d0b1925b87d62698b125fe7bdf963882eece80",
+      "sha256": "472a51ca868471c4163fac16ae064be518daf4383fe44667eee7a774e3406582",
       "short_name": "R1",
       "size": 1317
     },
@@ -45,9 +45,9 @@
       "restore_artifact": "R2.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "9a1e4f611647b49c77a5264b3ed82d7a89c9c2fba77f5afa7310a64ac8a7daaa",
+      "restore_sha256": "ffe1f9e0280227bc1c819fd7d72a8c16e42f9dcd0ec0d8e9955710674b95b89d",
       "restore_size": 2118,
-      "sha256": "bac295a2e1a6d08672c207261de2c008db6053d0a248e332597cff7279e370b7",
+      "sha256": "4c67cea5adbfa497c827706e2b6eacfadaaa651b192737d4fb17be3ed2944ef1",
       "short_name": "R2",
       "size": 1474
     }

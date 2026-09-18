@@ -18,7 +18,7 @@ set interfaces et-0/0/2 description "LAN (H1)"
 set interfaces et-0/0/2 unit 0 family inet address 10.7.1.1/24
 set interfaces lo0 unit 0 family inet address 10.7.0.2/32
 set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0002.00
-set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.132/24
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.192/24
 set protocols isis interface et-0/0/0.0 point-to-point
 set protocols isis interface et-0/0/2.0 passive
 set protocols isis interface lo0.0 passive
