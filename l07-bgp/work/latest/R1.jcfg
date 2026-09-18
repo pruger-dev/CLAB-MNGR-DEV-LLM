@@ -1,0 +1,124 @@
+## Last commit: 2026-09-18 15:34:29 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name R1;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port 32767;
+                    }
+                }
+            }
+        }
+    }
+}
+interfaces {
+    et-0/0/0 {
+        description "to R2";
+        unit 0 {
+            family inet {
+                address 10.7.12.0/31;
+            }
+            family iso;
+        }
+    }
+    et-0/0/1 {
+        description "to ISP-A (AS 65001)";
+        unit 0 {
+            family inet {
+                address 172.16.1.1/31;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.7.0.1/32;
+            }
+            family iso {
+                address 49.0001.0000.0000.0001.00;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.131/24;
+            }
+        }
+    }
+}
+policy-options {
+    policy-statement export-ours {
+        term ours {
+            from {
+                protocol aggregate;
+                route-filter 10.7.0.0/16 exact;
+            }
+            then accept;
+        }
+    }
+    policy-statement next-hop-self {
+        term ibgp {
+            then {
+                next-hop self;
+            }
+        }
+    }
+}
+routing-options {
+    router-id 10.7.0.1;
+    autonomous-system 65100;
+    aggregate {
+        route 10.7.0.0/16;
+    }
+}
+protocols {
+    bgp {
+        group ISP-A {
+            type external;
+            export export-ours;
+            peer-as 65001;
+            neighbor 172.16.1.0;
+        }
+        group internal {
+            type internal;
+            local-address 10.7.0.1;
+            export next-hop-self;
+            neighbor 10.7.0.2;
+        }
+    }
+    isis {
+        interface et-0/0/0.0 {
+            point-to-point;
+        }
+        interface lo0.0 {
+            passive;
+        }
+        level 1 disable;
+    }
+}
