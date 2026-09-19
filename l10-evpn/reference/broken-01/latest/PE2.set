@@ -1,0 +1,51 @@
+set version 26.2R1.7-EVO
+set system host-name PE2
+set system root-authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system login user admin uid 500
+set system login user admin class superuser
+set system login user admin authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system services ssh
+set system services extension-service request-response grpc clear-text port 32767
+set interfaces et-0/0/0 description "to P"
+set interfaces et-0/0/0 mtu 9192
+set interfaces et-0/0/0 unit 0 family inet address 10.10.24.0/31
+set interfaces et-0/0/0 unit 0 family iso
+set interfaces et-0/0/0 unit 0 family mpls
+set interfaces et-0/0/1 description "customer A site 2 (HA2)"
+set interfaces et-0/0/1 encapsulation ethernet-ccc
+set interfaces et-0/0/1 unit 0 family ccc
+set interfaces et-0/0/2 description "customer B site 2 (HB2)"
+set interfaces et-0/0/2 unit 0 family ethernet-switching interface-mode access
+set interfaces et-0/0/2 unit 0 family ethernet-switching vlan members B200
+set interfaces lo0 unit 0 family inet address 10.10.0.2/32
+set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0002.00
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.142/24
+set routing-instances ELAN-B instance-type mac-vrf
+set routing-instances ELAN-B protocols evpn encapsulation mpls
+set routing-instances ELAN-B service-type vlan-based
+set routing-instances ELAN-B interface et-0/0/2.0
+set routing-instances ELAN-B route-distinguisher 10.10.0.2:200
+set routing-instances ELAN-B vrf-target target:65100:200
+set routing-instances ELAN-B vlans B200 vlan-id 200
+set routing-instances ELINE-A instance-type evpn-vpws
+set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id local 2
+set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id remote 3
+set routing-instances ELINE-A interface et-0/0/1.0
+set routing-instances ELINE-A route-distinguisher 10.10.0.2:100
+set routing-instances ELINE-A vrf-target target:65100:100
+set routing-options router-id 10.10.0.2
+set routing-options autonomous-system 65100
+set protocols bgp group rr type internal
+set protocols bgp group rr local-address 10.10.0.2
+set protocols bgp group rr family evpn signaling
+set protocols bgp group rr neighbor 10.10.0.4
+set protocols isis interface et-0/0/0.0 point-to-point
+set protocols isis interface lo0.0 passive
+set protocols isis source-packet-routing srgb start-label 16000
+set protocols isis source-packet-routing srgb index-range 8000
+set protocols isis source-packet-routing node-segment ipv4-index 2
+set protocols isis level 1 disable
+set protocols mpls interface et-0/0/0.0

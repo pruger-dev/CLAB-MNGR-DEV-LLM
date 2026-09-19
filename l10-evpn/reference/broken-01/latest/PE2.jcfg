@@ -1,0 +1,153 @@
+## Last commit: 2026-09-19 19:54:16 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name PE2;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port 32767;
+                    }
+                }
+            }
+        }
+    }
+}
+interfaces {
+    et-0/0/0 {
+        description "to P";
+        mtu 9192;
+        unit 0 {
+            family inet {
+                address 10.10.24.0/31;
+            }
+            family iso;
+            family mpls;
+        }
+    }
+    et-0/0/1 {
+        description "customer A site 2 (HA2)";
+        encapsulation ethernet-ccc;
+        unit 0 {
+            family ccc;
+        }
+    }
+    et-0/0/2 {
+        description "customer B site 2 (HB2)";
+        unit 0 {
+            family ethernet-switching {
+                interface-mode access;
+                vlan {
+                    members B200;
+                }
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.10.0.2/32;
+            }
+            family iso {
+                address 49.0001.0000.0000.0002.00;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.142/24;
+            }
+        }
+    }
+}
+routing-instances {
+    ELAN-B {
+        instance-type mac-vrf;
+        protocols {
+            evpn {
+                encapsulation mpls;
+            }
+        }
+        service-type vlan-based;
+        interface et-0/0/2.0;
+        route-distinguisher 10.10.0.2:200;
+        vrf-target target:65100:200;
+        vlans {
+            B200 {
+                vlan-id 200;
+            }
+        }
+    }
+    ELINE-A {
+        instance-type evpn-vpws;
+        protocols {
+            evpn {
+                interface et-0/0/1.0 {
+                    vpws-service-id {
+                        local 2;
+                        remote 3;
+                    }
+                }
+            }
+        }
+        interface et-0/0/1.0;
+        route-distinguisher 10.10.0.2:100;
+        vrf-target target:65100:100;
+    }
+}
+routing-options {
+    router-id 10.10.0.2;
+    autonomous-system 65100;
+}
+protocols {
+    bgp {
+        group rr {
+            type internal;
+            local-address 10.10.0.2;
+            family evpn {
+                signaling;
+            }
+            neighbor 10.10.0.4;
+        }
+    }
+    isis {
+        interface et-0/0/0.0 {
+            point-to-point;
+        }
+        interface lo0.0 {
+            passive;
+        }
+        source-packet-routing {
+            srgb start-label 16000 index-range 8000;
+            node-segment ipv4-index 2;
+        }
+        level 1 disable;
+    }
+    mpls {
+        interface et-0/0/0.0;
+    }
+}
