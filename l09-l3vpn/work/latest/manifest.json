@@ -1,0 +1,75 @@
+{
+  "backup_job_id": "cd2543844db14e0bb76bd4fa1a34c47e",
+  "captured_at": "2026-09-19T14:24:33.797765+00:00",
+  "excluded_nodes": [
+    "clab-l09-l3vpn-HA1",
+    "clab-l09-l3vpn-HA2",
+    "clab-l09-l3vpn-HB1",
+    "clab-l09-l3vpn-HB2"
+  ],
+  "files": [
+    {
+      "format": "eos-running-config",
+      "node": "clab-l09-l3vpn-CE-B2",
+      "path": "CE-B2.cfg",
+      "platform": "arista_ceos",
+      "sha256": "10bc5107f80d39313965de37af90ca941b77d91ab69522b2b3487825374c48ce",
+      "short_name": "CE-B2",
+      "size": 1257
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l09-l3vpn-P",
+      "path": "P.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "P.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "d9c8b524ad8f4647624812b65fad5b33f523b2a66a60f7518830c795b4b2153f",
+      "restore_size": 2316,
+      "sha256": "d54f8eff565ec0c3ecc2b66836fc9c030c7a19acf1224560d28f4a653707b6c6",
+      "short_name": "P",
+      "size": 1827
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l09-l3vpn-PE1",
+      "path": "PE1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PE1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "0533a2db7d818b0e4edde47ac064c7cc0df888b486a6bbea7cea60e3cfb715a4",
+      "restore_size": 2910,
+      "sha256": "8ba081f1cbcf69f11cf2712c8f796294a9168a5be3937c234f18712806242f77",
+      "short_name": "PE1",
+      "size": 2455
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l09-l3vpn-PE2",
+      "path": "PE2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PE2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "2df2dab36705ec314c0d3895bac4c4b1ddca302879d1b9cb81f89334c284e491",
+      "restore_size": 3142,
+      "sha256": "686f9b1417229f3308f5834a387a7c6cfecaa5a9e8acfc6d75a92a37c1ad26b5",
+      "short_name": "PE2",
+      "size": 2679
+    }
+  ],
+  "lab_id": "08cb17a8380442d79d7cff8c72a00861",
+  "lab_name": "l09-l3vpn",
+  "node_names": [
+    "clab-l09-l3vpn-CE-B2",
+    "clab-l09-l3vpn-P",
+    "clab-l09-l3vpn-PE1",
+    "clab-l09-l3vpn-PE2"
+  ],
+  "restore_capable_nodes": 3,
+  "schema": 2,
+  "topology_digest": "b48ca067b8eca93fd37f6f63dde0583f3b5e8f1beff9a4282d24745707d50b81",
+  "topology_provenance": "captured"
+}
