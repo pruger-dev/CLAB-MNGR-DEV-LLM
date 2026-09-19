@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "4f6f1180b0b845e99537435039831f23",
-  "captured_at": "2026-09-19T19:51:15.491063+00:00",
+  "backup_job_id": "f3575d7365674678a9af99c5e9354a77",
+  "captured_at": "2026-09-19T20:46:04.611751+00:00",
   "excluded_nodes": [
     "clab-l10-evpn-HA1",
     "clab-l10-evpn-HA2",
@@ -19,11 +19,11 @@
       "restore_artifact": "P.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "a63b9e5a3302aedb6b38c11d156534bbe6f196f26319321cae2b5b2139470d62",
-      "restore_size": 2772,
-      "sha256": "499b40e99eb259438c456cee0e1418b132b293c86d7596b5e7d7b2129515b8e0",
+      "restore_sha256": "ed8850d969b66f705366cd3484d8599a919242358404728c180e07ed96f95514",
+      "restore_size": 2987,
+      "sha256": "8fd1365146fc96fb122f3409a2158b85fa005a0e2fdf33b48811a3b092a9d028",
       "short_name": "P",
-      "size": 2534
+      "size": 2616
     },
     {
       "format": "junos-display-set",
@@ -33,7 +33,7 @@
       "restore_artifact": "PE1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "6f8c96eb41f0aba7c9f7b147851104ea1cb877874d4c7c9d549d54ce2317e9a0",
+      "restore_sha256": "86166bb9700e3ef87d26552c02c0701a89302d0155c39cb253cdd82a8698ca56",
       "restore_size": 2026,
       "sha256": "564e7d191e6b7df29c2f3ca64e494fc9c13c7fc99309cf77df628ebdeb424692",
       "short_name": "PE1",
@@ -47,7 +47,7 @@
       "restore_artifact": "PE2.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "93ebd257347427848fa5b19c88fd092dd07a3eb4e61d7f6b47946d0af1b11d51",
+      "restore_sha256": "190303c907ee74c356fb9f622f20534021e3a18a177536106a65eeb78f90ff7a",
       "restore_size": 1951,
       "sha256": "7072ddd707acc686fae2c93cd3f64e08d701ee2c405793476533d59ab0f7ec6a",
       "short_name": "PE2",
@@ -61,7 +61,7 @@
       "restore_artifact": "PE3.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "edbc1a6e5e91ea655e5884596ac105e436a3814eb10be6ca382533189a41c3df",
+      "restore_sha256": "80a37f5d9f2de55827c51f43e46372960db6c3f61bbfd5215839b35bec82f56b",
       "restore_size": 4070,
       "sha256": "19431f2f14186b425a9e2644b053643d5d10dcacd05d39f7910fb8533cfe6ff8",
       "short_name": "PE3",

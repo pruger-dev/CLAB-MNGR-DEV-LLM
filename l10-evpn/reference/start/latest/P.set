@@ -8,6 +8,7 @@ set system syslog file interactive-commands interactive-commands any
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system services ssh
+set system services extension-service request-response grpc clear-text port 32767
 set interfaces et-0/0/0 description "to PE1"
 set interfaces et-0/0/0 mtu 9192
 set interfaces et-0/0/0 unit 0 family inet address 10.10.14.1/31
