@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "64564a80e4d741eb857c6cb833d3c94d",
-  "captured_at": "2026-09-19T13:47:37.046634+00:00",
+  "backup_job_id": "1ec4caee1b58499485e3ed4edf58d135",
+  "captured_at": "2026-09-19T13:57:29.276639+00:00",
   "excluded_nodes": [
     "clab-l09-l3vpn-HA1",
     "clab-l09-l3vpn-HA2",
@@ -25,11 +25,11 @@
       "restore_artifact": "P.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "db04f3278044a88e8f5392d099b314bdbe8a2dae9e4cd22a06a4f4c90b09c2e3",
-      "restore_size": 2280,
-      "sha256": "80120884c4f23586db7adfacaab230f002570d771bd9312a20e69e4de8d7fc0f",
+      "restore_sha256": "f268a270a2d229fcf4243c22fc304dbe98e8437c62a52f17abd7bbc703a4e389",
+      "restore_size": 2316,
+      "sha256": "d54f8eff565ec0c3ecc2b66836fc9c030c7a19acf1224560d28f4a653707b6c6",
       "short_name": "P",
-      "size": 1761
+      "size": 1827
     },
     {
       "format": "junos-display-set",
@@ -39,11 +39,11 @@
       "restore_artifact": "PE1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "d3eaf7a373a26216776d96120e5d145b17553dc4d41a36181336d54c7046e562",
-      "restore_size": 2892,
-      "sha256": "a783852a15d586983ca3e89fbf3b90007f5e0f83b8441035ce27feaac59b4671",
+      "restore_sha256": "7bdc64d9ea1e2dd848f2fb9ad4dfe4591a5fa6345d42006d89d25c37a275d406",
+      "restore_size": 2910,
+      "sha256": "8ba081f1cbcf69f11cf2712c8f796294a9168a5be3937c234f18712806242f77",
       "short_name": "PE1",
-      "size": 2422
+      "size": 2455
     },
     {
       "format": "junos-display-set",
@@ -53,11 +53,11 @@
       "restore_artifact": "PE2.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "b1a1a063d26005ce457d034d423a2c45e6614e3a4ca61d4f43f47a9e7903c87e",
-      "restore_size": 3124,
-      "sha256": "85c725f282801e8457708c47d8bcc3adeccfae71e4ebd890f8d03f29ca72954a",
+      "restore_sha256": "ec806c1047bc5ff38c21990dd6c230f19ebb259cbf95ebd3195ab92794472922",
+      "restore_size": 3142,
+      "sha256": "686f9b1417229f3308f5834a387a7c6cfecaa5a9e8acfc6d75a92a37c1ad26b5",
       "short_name": "PE2",
-      "size": 2646
+      "size": 2679
     }
   ],
   "lab_id": "08cb17a8380442d79d7cff8c72a00861",
