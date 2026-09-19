@@ -1,0 +1,71 @@
+set version 26.2R1.7-EVO
+set system host-name PE1
+set system root-authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system login user admin uid 500
+set system login user admin class superuser
+set system login user admin authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system services ssh
+set interfaces et-0/0/0 description "to P"
+set interfaces et-0/0/0 mtu 9192
+set interfaces et-0/0/0 unit 0 family inet address 10.10.14.0/31
+set interfaces et-0/0/0 unit 0 family iso
+set interfaces et-0/0/0 unit 0 family mpls
+set interfaces et-0/0/1 description "customer A site 1 (HA1)"
+set interfaces et-0/0/1 encapsulation ethernet-ccc
+set interfaces et-0/0/1 unit 0 family ccc
+set interfaces et-0/0/2 description "customer B site 1 (HB1)"
+set interfaces et-0/0/2 unit 0 family ethernet-switching interface-mode access
+set interfaces et-0/0/2 unit 0 family ethernet-switching vlan members B200
+set interfaces et-0/0/3 description "customer C site 1 (HC1), trunk"
+set interfaces et-0/0/3 flexible-vlan-tagging
+set interfaces et-0/0/3 encapsulation flexible-ethernet-services
+set interfaces et-0/0/3 unit 10 encapsulation vlan-ccc
+set interfaces et-0/0/3 unit 10 vlan-id 10
+set interfaces et-0/0/3 unit 20 encapsulation vlan-bridge
+set interfaces et-0/0/3 unit 20 vlan-id 20
+set interfaces lo0 unit 0 family inet address 10.10.0.1/32
+set interfaces lo0 unit 0 family iso address 49.0001.0000.0000.0001.00
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.141/24
+set routing-instances ELAN-B instance-type mac-vrf
+set routing-instances ELAN-B protocols evpn encapsulation mpls
+set routing-instances ELAN-B service-type vlan-based
+set routing-instances ELAN-B interface et-0/0/2.0
+set routing-instances ELAN-B route-distinguisher 10.10.0.1:200
+set routing-instances ELAN-B vrf-target target:65100:200
+set routing-instances ELAN-B vlans B200 vlan-id 200
+set routing-instances ELAN-C instance-type mac-vrf
+set routing-instances ELAN-C protocols evpn encapsulation mpls
+set routing-instances ELAN-C service-type vlan-based
+set routing-instances ELAN-C interface et-0/0/3.20
+set routing-instances ELAN-C route-distinguisher 10.10.0.1:320
+set routing-instances ELAN-C vrf-target target:65100:320
+set routing-instances ELAN-C vlans C20 vlan-id 20
+set routing-instances ELAN-C vlans C20 interface et-0/0/3.20
+set routing-instances ELINE-A instance-type evpn-vpws
+set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id local 1
+set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id remote 2
+set routing-instances ELINE-A interface et-0/0/1.0
+set routing-instances ELINE-A route-distinguisher 10.10.0.1:100
+set routing-instances ELINE-A vrf-target target:65100:100
+set routing-instances ELINE-C instance-type evpn-vpws
+set routing-instances ELINE-C protocols evpn interface et-0/0/3.10 vpws-service-id local 11
+set routing-instances ELINE-C protocols evpn interface et-0/0/3.10 vpws-service-id remote 13
+set routing-instances ELINE-C interface et-0/0/3.10
+set routing-instances ELINE-C route-distinguisher 10.10.0.1:310
+set routing-instances ELINE-C vrf-target target:65100:310
+set routing-options router-id 10.10.0.1
+set routing-options autonomous-system 65100
+set protocols bgp group rr type internal
+set protocols bgp group rr local-address 10.10.0.1
+set protocols bgp group rr family evpn signaling
+set protocols bgp group rr neighbor 10.10.0.4
+set protocols isis interface et-0/0/0.0 point-to-point
+set protocols isis interface lo0.0 passive
+set protocols isis source-packet-routing srgb start-label 16000
+set protocols isis source-packet-routing srgb index-range 8000
+set protocols isis source-packet-routing node-segment ipv4-index 1
+set protocols isis level 1 disable
+set protocols mpls interface et-0/0/0.0

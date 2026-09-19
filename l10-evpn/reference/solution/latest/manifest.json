@@ -1,0 +1,83 @@
+{
+  "backup_job_id": "e9c6dff4db144adab9e11933a3baf599",
+  "captured_at": "2026-09-19T19:53:16.161242+00:00",
+  "excluded_nodes": [
+    "clab-l10-evpn-HA1",
+    "clab-l10-evpn-HA2",
+    "clab-l10-evpn-HB1",
+    "clab-l10-evpn-HB2",
+    "clab-l10-evpn-HB3",
+    "clab-l10-evpn-HC1",
+    "clab-l10-evpn-HC3"
+  ],
+  "files": [
+    {
+      "format": "junos-display-set",
+      "node": "clab-l10-evpn-P",
+      "path": "P.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "P.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "079b59d152feb771533c88c1b4e917dc3d7054199b779a4f07de751b5ec673b8",
+      "restore_size": 2987,
+      "sha256": "8fd1365146fc96fb122f3409a2158b85fa005a0e2fdf33b48811a3b092a9d028",
+      "short_name": "P",
+      "size": 2616
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l10-evpn-PE1",
+      "path": "PE1.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PE1.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "96c948963cf1148e031d2d14b14b2415b604ba1c2870d0718a220564e18bd53d",
+      "restore_size": 4420,
+      "sha256": "8608279be537ca96e819e1fb6ba0c233ff23271acb393d5cd75f08fe7ce9df01",
+      "short_name": "PE1",
+      "size": 4104
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l10-evpn-PE2",
+      "path": "PE2.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PE2.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "8ecf62da1cdaa78e9dc8e51ba0befa7d206f11e249cd9f0b5bb44c2f6ce67fb1",
+      "restore_size": 3253,
+      "sha256": "51acf2b0b5a97e1ab4b0ee01cb2a7d049b675058c6879ec0c1cdc5f577d148e9",
+      "short_name": "PE2",
+      "size": 2863
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-l10-evpn-PE3",
+      "path": "PE3.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "PE3.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "edbc1a6e5e91ea655e5884596ac105e436a3814eb10be6ca382533189a41c3df",
+      "restore_size": 4070,
+      "sha256": "19431f2f14186b425a9e2644b053643d5d10dcacd05d39f7910fb8533cfe6ff8",
+      "short_name": "PE3",
+      "size": 3623
+    }
+  ],
+  "lab_id": "797db5fc9757415eb008a1a98b6c9787",
+  "lab_name": "l10-evpn",
+  "node_names": [
+    "clab-l10-evpn-P",
+    "clab-l10-evpn-PE1",
+    "clab-l10-evpn-PE2",
+    "clab-l10-evpn-PE3"
+  ],
+  "restore_capable_nodes": 4,
+  "schema": 2,
+  "topology_digest": "f0f8c5004eff4063bef78c6d315c7d9bb4677fcd2c4a1a2278dde9c83fa97a5d",
+  "topology_provenance": "captured"
+}
