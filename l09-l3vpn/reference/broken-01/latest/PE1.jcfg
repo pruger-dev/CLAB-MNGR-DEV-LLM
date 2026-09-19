@@ -1,0 +1,131 @@
+## Last commit: 2026-09-19 14:07:25 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name PE1;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port 32767;
+                    }
+                }
+            }
+        }
+    }
+}
+interfaces {
+    et-0/0/0 {
+        description "to P";
+        mtu 9192;
+        unit 0 {
+            family inet {
+                address 10.9.12.0/31;
+            }
+            family iso;
+            family mpls;
+        }
+    }
+    et-0/0/1 {
+        description "customer A site 1 (HA1)";
+        unit 0 {
+            family inet {
+                address 192.168.1.1/24;
+            }
+        }
+    }
+    et-0/0/2 {
+        description "customer B site 1 (HB1)";
+        unit 0 {
+            family inet {
+                address 192.168.1.1/24;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.9.0.1/32;
+            }
+            family iso {
+                address 49.0001.0000.0000.0001.00;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.131/24;
+            }
+        }
+    }
+}
+routing-instances {
+    CUST-A {
+        instance-type vrf;
+        interface et-0/0/1.0;
+        route-distinguisher 10.9.0.1:100;
+        vrf-target target:65100:100;
+        vrf-table-label;
+    }
+    CUST-B {
+        instance-type vrf;
+        route-distinguisher 10.9.0.1:200;
+        vrf-target target:65100:200;
+        vrf-table-label;
+    }
+}
+routing-options {
+    router-id 10.9.0.1;
+    autonomous-system 65100;
+}
+protocols {
+    bgp {
+        group internal {
+            type internal;
+            local-address 10.9.0.1;
+            family inet-vpn {
+                unicast;
+            }
+            neighbor 10.9.0.3;
+        }
+    }
+    isis {
+        interface et-0/0/0.0 {
+            point-to-point;
+        }
+        interface lo0.0 {
+            passive;
+        }
+        level 1 disable;
+    }
+    ldp {
+        interface et-0/0/0.0;
+        interface lo0.0;
+    }
+    mpls {
+        interface et-0/0/0.0;
+    }
+}

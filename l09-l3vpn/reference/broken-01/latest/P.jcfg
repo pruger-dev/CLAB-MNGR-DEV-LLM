@@ -1,0 +1,105 @@
+## Last commit: 2026-09-19 14:07:34 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name P;
+    root-authentication {
+        encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+    }
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port 32767;
+                    }
+                }
+            }
+        }
+    }
+}
+interfaces {
+    et-0/0/0 {
+        description "to PE1";
+        mtu 9192;
+        unit 0 {
+            family inet {
+                address 10.9.12.1/31;
+            }
+            family iso;
+            family mpls;
+        }
+    }
+    et-0/0/1 {
+        description "to PE2";
+        mtu 9192;
+        unit 0 {
+            family inet {
+                address 10.9.23.0/31;
+            }
+            family iso;
+            family mpls;
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.9.0.2/32;
+            }
+            family iso {
+                address 49.0001.0000.0000.0002.00;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.132/24;
+            }
+        }
+    }
+}
+routing-options {
+    router-id 10.9.0.2;
+    autonomous-system 65100;
+}
+protocols {
+    isis {
+        interface et-0/0/0.0 {
+            point-to-point;
+        }
+        interface et-0/0/1.0 {
+            point-to-point;
+        }
+        interface lo0.0 {
+            passive;
+        }
+        level 1 disable;
+    }
+    ldp {
+        interface et-0/0/1.0;
+        interface lo0.0;
+    }
+    mpls {
+        interface et-0/0/0.0;
+        interface et-0/0/1.0;
+    }
+}
