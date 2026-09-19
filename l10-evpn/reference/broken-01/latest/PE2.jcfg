@@ -1,4 +1,4 @@
-## Last commit: 2026-09-19 19:54:16 UTC by admin
+## Last commit: 2026-09-19 20:20:23 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name PE2;
@@ -25,15 +25,6 @@ system {
     }
     services {
         ssh;
-        extension-service {
-            request-response {
-                grpc {
-                    clear-text {
-                        port 32767;
-                    }
-                }
-            }
-        }
     }
 }
 interfaces {
@@ -109,14 +100,14 @@ routing-instances {
                 interface et-0/0/1.0 {
                     vpws-service-id {
                         local 2;
-                        remote 3;
+                        remote 1;
                     }
                 }
             }
         }
         interface et-0/0/1.0;
         route-distinguisher 10.10.0.2:100;
-        vrf-target target:65100:100;
+        vrf-target target:65100:101;
     }
 }
 routing-options {

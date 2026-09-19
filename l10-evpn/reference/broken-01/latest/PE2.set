@@ -8,7 +8,6 @@ set system syslog file interactive-commands interactive-commands any
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system services ssh
-set system services extension-service request-response grpc clear-text port 32767
 set interfaces et-0/0/0 description "to P"
 set interfaces et-0/0/0 mtu 9192
 set interfaces et-0/0/0 unit 0 family inet address 10.10.24.0/31
@@ -32,10 +31,10 @@ set routing-instances ELAN-B vrf-target target:65100:200
 set routing-instances ELAN-B vlans B200 vlan-id 200
 set routing-instances ELINE-A instance-type evpn-vpws
 set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id local 2
-set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id remote 3
+set routing-instances ELINE-A protocols evpn interface et-0/0/1.0 vpws-service-id remote 1
 set routing-instances ELINE-A interface et-0/0/1.0
 set routing-instances ELINE-A route-distinguisher 10.10.0.2:100
-set routing-instances ELINE-A vrf-target target:65100:100
+set routing-instances ELINE-A vrf-target target:65100:101
 set routing-options router-id 10.10.0.2
 set routing-options autonomous-system 65100
 set protocols bgp group rr type internal

@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "d679c88b41304f9fa52b234f0f58c47a",
-  "captured_at": "2026-09-19T19:57:20.065541+00:00",
+  "backup_job_id": "402a26ba80304afcb87a3c112c3c8693",
+  "captured_at": "2026-09-19T20:21:06.803459+00:00",
   "excluded_nodes": [
     "clab-l10-evpn-HA1",
     "clab-l10-evpn-HA2",
@@ -19,7 +19,7 @@
       "restore_artifact": "P.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "5e1193b92fbc961b59bae6045cf66727bb47e33db4aaa3cdb46383e9c77b7302",
+      "restore_sha256": "4d6fb85982a222727c9ba9acd03295fe6bf679e5282a601ef415d4d4ed53c1d2",
       "restore_size": 2955,
       "sha256": "24ed1ead3c289ed18f9a4add165e326b5afe2e3ee289a732eb6bda3208e9e4f7",
       "short_name": "P",
@@ -33,11 +33,11 @@
       "restore_artifact": "PE1.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "3ce68a557d767cdfa61e712119824d1b625370d1ba0a4ef77d2c1628ecd03e15",
-      "restore_size": 4635,
-      "sha256": "5ca002e0c8e6dc75f6b5a21135516f85547893f9eb8b9a8e634082c7fda1288c",
+      "restore_sha256": "9c67d9b151986d4c7e8f09ee8085f47b5aeb0a29c3e2f81acf4616ce9aab95da",
+      "restore_size": 4420,
+      "sha256": "8608279be537ca96e819e1fb6ba0c233ff23271acb393d5cd75f08fe7ce9df01",
       "short_name": "PE1",
-      "size": 4186
+      "size": 4104
     },
     {
       "format": "junos-display-set",
@@ -47,11 +47,11 @@
       "restore_artifact": "PE2.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "fd3b272a0766f7e6c09cb9cef5b360d857a6f8d496dc17ddabb3c227587c700f",
-      "restore_size": 3468,
-      "sha256": "18e125558cc16e2385d92aa146b9b52a4dab978041d663a2cc1dd67df0f7e327",
+      "restore_sha256": "413e5d30e5fc6747f33f209ca3404cc68e30f5da358e3900a864ba03e51cf6c6",
+      "restore_size": 3253,
+      "sha256": "946c6a98325362fdf0b9bd7ccaa94230b1d8cfbdbaedfb0bccc63343660dc027",
       "short_name": "PE2",
-      "size": 2945
+      "size": 2863
     },
     {
       "format": "junos-display-set",
@@ -61,7 +61,7 @@
       "restore_artifact": "PE3.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "d591b864da26fe6d2bb9ded78cb9f54ca1da38bfb22762135a249b5b0a0a4fc1",
+      "restore_sha256": "4534703c3f279329c5858f8b2d3421f5aa1e54115e318605feca91b7b367034c",
       "restore_size": 4070,
       "sha256": "537bfeeb9d22b8f8027cb973d37eb739fe7a7442a22f57020d778a9285208300",
       "short_name": "PE3",
