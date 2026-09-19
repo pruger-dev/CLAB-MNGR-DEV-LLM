@@ -10,6 +10,7 @@ set system syslog file messages authorization info
 set system services ssh
 set system services extension-service request-response grpc clear-text port 32767
 set interfaces et-0/0/0 description "to P"
+set interfaces et-0/0/0 mtu 9192
 set interfaces et-0/0/0 unit 0 family inet address 10.9.23.1/31
 set interfaces et-0/0/0 unit 0 family iso
 set interfaces et-0/0/0 unit 0 family mpls

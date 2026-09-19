@@ -1,4 +1,4 @@
-## Last commit: 2026-09-19 13:46:03 UTC by admin
+## Last commit: 2026-09-19 13:55:36 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name PE2;
@@ -39,6 +39,7 @@ system {
 interfaces {
     et-0/0/0 {
         description "to P";
+        mtu 9192;
         unit 0 {
             family inet {
                 address 10.9.23.1/31;
