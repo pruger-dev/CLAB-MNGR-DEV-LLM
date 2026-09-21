@@ -1,9 +1,7 @@
 {
-  "backup_job_id": "7bfbfcd7bf8f4a57ab948aa7e9cc9774",
-  "captured_at": "2026-09-21T00:20:40.400494+00:00",
-  "excluded_nodes": [
-    "clab-restore-square-xrv9k"
-  ],
+  "backup_job_id": "fdd38d0024254810b1b3c6f12ec9be90",
+  "captured_at": "2026-09-21T01:41:56.152192+00:00",
+  "excluded_nodes": [],
   "files": [
     {
       "format": "eos-running-config",
@@ -27,8 +25,8 @@
       "restore_artifact": "cjunosevolved.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "7281d06a12ddd5225633da9b8f73d610fb54c6a37596425e42275234a9290e41",
-      "restore_size": 2131,
+      "restore_sha256": "6c79a9a30863cd41ae6bd79571371016afa183c5e2bdeb00478ec71b867abede",
+      "restore_size": 2132,
       "sha256": "f6f27b7b2ce0afb3a5516f4efc8f682b1290435b4fc2eee6f4de62fc0fb9685c",
       "short_name": "cjunosevolved",
       "size": 1482
@@ -41,11 +39,20 @@
       "restore_artifact": "vjunos-switch.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "b9381e62b207e407fe9cd4ef844e1c78952c267465e7dc2e36b31a34dbd1677a",
-      "restore_size": 2312,
+      "restore_sha256": "a770104c34775a991229d03d3dfc9051d73c436e0ca811976e81f743d0dd2584",
+      "restore_size": 2313,
       "sha256": "8c2ae0f0da9a85ba050531284fe21404d8b2207610d7b58a418d85fffa402a28",
       "short_name": "vjunos-switch",
       "size": 1619
+    },
+    {
+      "format": "iosxr-running-config",
+      "node": "clab-restore-square-xrv9k",
+      "path": "xrv9k.cfg",
+      "platform": "cisco_xrv9k",
+      "sha256": "4f6fef9b7dd7b1fe4f294c395e41bafd7c2f15c06fb1e707efcd02df13eccbf1",
+      "short_name": "xrv9k",
+      "size": 1507
     }
   ],
   "lab_id": "904a35a79dc341ce8a4638f83fc34185",
@@ -53,7 +60,8 @@
   "node_names": [
     "clab-restore-square-ceos",
     "clab-restore-square-cjunosevolved",
-    "clab-restore-square-vjunos-switch"
+    "clab-restore-square-vjunos-switch",
+    "clab-restore-square-xrv9k"
   ],
   "restore_capable_nodes": 3,
   "schema": 2,
