@@ -1,0 +1,62 @@
+{
+  "backup_job_id": "7bfbfcd7bf8f4a57ab948aa7e9cc9774",
+  "captured_at": "2026-09-21T00:20:40.400494+00:00",
+  "excluded_nodes": [
+    "clab-restore-square-xrv9k"
+  ],
+  "files": [
+    {
+      "format": "eos-running-config",
+      "node": "clab-restore-square-ceos",
+      "path": "ceos.cfg",
+      "platform": "arista_ceos",
+      "restore_artifact": "ceos.eoscfg",
+      "restore_capable": true,
+      "restore_format": "eos-running-config",
+      "restore_sha256": "1c18c6b7051b0e375a662e0cc7cdd52e88f5c2962e911f1b0fdc0aeefe1942f7",
+      "restore_size": 1507,
+      "sha256": "1c18c6b7051b0e375a662e0cc7cdd52e88f5c2962e911f1b0fdc0aeefe1942f7",
+      "short_name": "ceos",
+      "size": 1507
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-restore-square-cjunosevolved",
+      "path": "cjunosevolved.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "cjunosevolved.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "7281d06a12ddd5225633da9b8f73d610fb54c6a37596425e42275234a9290e41",
+      "restore_size": 2131,
+      "sha256": "f6f27b7b2ce0afb3a5516f4efc8f682b1290435b4fc2eee6f4de62fc0fb9685c",
+      "short_name": "cjunosevolved",
+      "size": 1482
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-restore-square-vjunos-switch",
+      "path": "vjunos-switch.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "vjunos-switch.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "b9381e62b207e407fe9cd4ef844e1c78952c267465e7dc2e36b31a34dbd1677a",
+      "restore_size": 2312,
+      "sha256": "8c2ae0f0da9a85ba050531284fe21404d8b2207610d7b58a418d85fffa402a28",
+      "short_name": "vjunos-switch",
+      "size": 1619
+    }
+  ],
+  "lab_id": "904a35a79dc341ce8a4638f83fc34185",
+  "lab_name": "restore-square",
+  "node_names": [
+    "clab-restore-square-ceos",
+    "clab-restore-square-cjunosevolved",
+    "clab-restore-square-vjunos-switch"
+  ],
+  "restore_capable_nodes": 3,
+  "schema": 2,
+  "topology_digest": "8d12d7a9020b9b933c086f1fb3599395ad17a9491355fa789831e2eeb48663f3",
+  "topology_provenance": "captured"
+}
