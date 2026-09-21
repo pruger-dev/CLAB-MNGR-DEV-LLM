@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "fdd38d0024254810b1b3c6f12ec9be90",
-  "captured_at": "2026-09-21T01:41:56.152192+00:00",
+  "backup_job_id": "f0e6866b0bcb442b82982c5b80c2e3ad",
+  "captured_at": "2026-09-21T01:48:31.488220+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -50,7 +50,12 @@
       "node": "clab-restore-square-xrv9k",
       "path": "xrv9k.cfg",
       "platform": "cisco_xrv9k",
-      "sha256": "4f6fef9b7dd7b1fe4f294c395e41bafd7c2f15c06fb1e707efcd02df13eccbf1",
+      "restore_artifact": "xrv9k.xrcfg",
+      "restore_capable": true,
+      "restore_format": "iosxr-running-config",
+      "restore_sha256": "b90a8de681bbc28283a2088419980625e1d52238d5d480f41a020ee93bc488d4",
+      "restore_size": 1507,
+      "sha256": "b90a8de681bbc28283a2088419980625e1d52238d5d480f41a020ee93bc488d4",
       "short_name": "xrv9k",
       "size": 1507
     }
@@ -63,7 +68,7 @@
     "clab-restore-square-vjunos-switch",
     "clab-restore-square-xrv9k"
   ],
-  "restore_capable_nodes": 3,
+  "restore_capable_nodes": 4,
   "schema": 2,
   "topology_digest": "8d12d7a9020b9b933c086f1fb3599395ad17a9491355fa789831e2eeb48663f3",
   "topology_provenance": "captured"
