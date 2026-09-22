@@ -1,0 +1,10 @@
+set version 26.2R1.7-EVO
+set system host-name HOSTNAME
+set system login user admin uid 500
+set system login user admin class superuser
+set system login user admin authentication encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"
+set system syslog file interactive-commands interactive-commands any
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system services ssh
+set interfaces re0:mgmt-0 unit 0 family inet address 172.20.20.102/24
