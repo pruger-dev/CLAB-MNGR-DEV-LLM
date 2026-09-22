@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "23e521f0f1204bc0bceb204f24f7ecae",
-  "captured_at": "2026-09-22T14:18:34.052873+00:00",
+  "backup_job_id": "6cc1c1a050f84ad0a175b3a31afcf88c",
+  "captured_at": "2026-09-22T14:20:40.397636+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -11,11 +11,11 @@
       "restore_artifact": "ceos.eoscfg",
       "restore_capable": true,
       "restore_format": "eos-running-config",
-      "restore_sha256": "1f71b268d8e6b53941aab206eb1b3531e4dda9928d48a09b4479bbc49faf9433",
-      "restore_size": 1001,
-      "sha256": "1f71b268d8e6b53941aab206eb1b3531e4dda9928d48a09b4479bbc49faf9433",
+      "restore_sha256": "de81399b18cc05798b881ae6f59c855c94f29fc6cf032fa4f06482b16b4976df",
+      "restore_size": 1007,
+      "sha256": "de81399b18cc05798b881ae6f59c855c94f29fc6cf032fa4f06482b16b4976df",
       "short_name": "ceos",
-      "size": 1001
+      "size": 1007
     },
     {
       "format": "junos-display-set",
