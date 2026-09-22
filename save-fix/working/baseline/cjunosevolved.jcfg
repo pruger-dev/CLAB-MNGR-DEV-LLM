@@ -1,4 +1,4 @@
-## Last commit: 2026-09-22 12:59:47 UTC by root
+## Last commit: 2026-09-22 14:59:15 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name HOSTNAME;
@@ -26,11 +26,24 @@ system {
     ## Warning: missing mandatory statement(s): 'root-authentication'
 }
 interfaces {
+    et-0/0/0 {
+        description "B changed";
+    }
     re0:mgmt-0 {
         unit 0 {
             family inet {
                 address 172.20.20.102/24;
             }
         }
+    }
+}
+policy-options {
+    prefix-list B-ONLY {
+        198.51.100.0/24;
+    }
+}
+routing-options {
+    static {
+        route 198.51.100.0/24 discard;
     }
 }
