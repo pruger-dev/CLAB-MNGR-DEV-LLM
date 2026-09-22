@@ -1,0 +1,50 @@
+!! Building configuration...
+!! IOS XR Configuration 24.3.1
+!! Last configuration change at Tue Sep 22 14:56:48 2026 by clab
+!
+hostname xrv9k
+username clab
+ group root-lr
+ group cisco-support
+ secret 10 $6$EjPDJ1vqHpxIBJ1.$nU1cfcV8PLCsgTZQ8nrMeTT4In3Clf8VE8UtduLs1nAJUYEHkcctq8JW70EARet.NJf6mgSeCYtH/T66LEjDo1
+!
+grpc
+ vrf clab-mgmt
+ port 57400
+ no-tls
+!
+vrf clab-mgmt
+ description Containerlab management VRF (DO NOT DELETE)
+ address-family ipv4 unicast
+ !
+ address-family ipv6 unicast
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ description Containerlab management interface
+ vrf clab-mgmt
+ ipv4 address 10.0.0.15 255.255.255.0
+ ipv6 address 2001:db8::2/64
+!
+interface GigabitEthernet0/0/0/0
+ shutdown
+!
+interface GigabitEthernet0/0/0/1
+ shutdown
+!
+router static
+ vrf clab-mgmt
+  address-family ipv4 unicast
+   0.0.0.0/0 10.0.0.2
+  !
+  address-family ipv6 unicast
+   ::/0 2001:db8::1
+  !
+ !
+!
+xml agent tty
+!
+ssh server v2
+ssh server vrf clab-mgmt
+ssh server netconf vrf default
+end
