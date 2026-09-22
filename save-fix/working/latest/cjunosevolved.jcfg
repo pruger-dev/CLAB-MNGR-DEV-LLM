@@ -1,4 +1,4 @@
-## Last commit: 2026-09-22 14:59:15 UTC by admin
+## Last commit: 2026-09-22 15:00:03 UTC by admin
 version 26.2R1.7-EVO;
 system {
     host-name HOSTNAME;
@@ -26,8 +26,8 @@ system {
     ## Warning: missing mandatory statement(s): 'root-authentication'
 }
 interfaces {
-    et-0/0/0 {
-        description "B changed";
+    et-0/0/1 {
+        description SAVEFIX-C-cjunosevolved;
     }
     re0:mgmt-0 {
         unit 0 {
@@ -35,15 +35,5 @@ interfaces {
                 address 172.20.20.102/24;
             }
         }
-    }
-}
-policy-options {
-    prefix-list B-ONLY {
-        198.51.100.0/24;
-    }
-}
-routing-options {
-    static {
-        route 198.51.100.0/24 discard;
     }
 }
