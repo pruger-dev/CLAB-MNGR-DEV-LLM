@@ -1,6 +1,6 @@
 !! Building configuration...
 !! IOS XR Configuration 24.3.1
-!! Last configuration change at Tue Sep 22 14:56:48 2026 by clab
+!! Last configuration change at Tue Sep 22 14:59:22 2026 by clab
 !
 hostname xrv9k
 username clab
@@ -20,6 +20,9 @@ vrf clab-mgmt
  address-family ipv6 unicast
  !
 !
+interface Loopback777
+ ipv4 address 198.51.100.77 255.255.255.255
+!
 interface MgmtEth0/RP0/CPU0/0
  description Containerlab management interface
  vrf clab-mgmt
@@ -27,10 +30,15 @@ interface MgmtEth0/RP0/CPU0/0
  ipv6 address 2001:db8::2/64
 !
 interface GigabitEthernet0/0/0/0
+ description B changed
  shutdown
 !
 interface GigabitEthernet0/0/0/1
  shutdown
+!
+prefix-set B-ONLY
+  198.51.100.0/24
+end-set
 !
 router static
  vrf clab-mgmt

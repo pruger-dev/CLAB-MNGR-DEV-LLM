@@ -1,4 +1,4 @@
-## Last commit: 2026-09-22 14:56:25 UTC by admin
+## Last commit: 2026-09-22 14:59:21 UTC by admin
 version 23.2R1.14;
 system {
     host-name vjunos-switch;
@@ -32,6 +32,9 @@ chassis {
     }
 }
 interfaces {
+    ge-0/0/0 {
+        description "B changed";
+    }
     fxp0 {
         unit 0 {
             family inet {
@@ -41,6 +44,11 @@ interfaces {
                 address 2001:db8::2/64;
             }
         }
+    }
+}
+policy-options {
+    prefix-list B-ONLY {
+        198.51.100.0/24;
     }
 }
 routing-instances {
@@ -55,5 +63,10 @@ routing-instances {
                 route 0.0.0.0/0 next-hop 10.0.0.2;
             }
         }
+    }
+}
+vlans {
+    B-ONLY {
+        vlan-id 777;
     }
 }
