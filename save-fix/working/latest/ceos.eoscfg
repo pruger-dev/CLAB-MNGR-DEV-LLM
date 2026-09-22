@@ -31,7 +31,7 @@ management api netconf
 interface Ethernet1
 !
 interface Ethernet2
-   description QA-B1 save test
+   description QA-B2a save test
 !
 interface Management0
    ip address 172.20.20.101/24
