@@ -1,4 +1,4 @@
-## Last commit: 2026-09-22 15:00:07 UTC by admin
+## Last commit: 2026-09-22 15:42:40 UTC by admin
 version 23.2R1.14;
 system {
     host-name vjunos-switch;
@@ -32,8 +32,21 @@ chassis {
     }
 }
 interfaces {
+    ge-0/0/0 {
+        description "A to-cjunosevolved";
+        unit 0 {
+            family inet {
+                address 10.0.23.1/31;
+            }
+        }
+    }
     ge-0/0/1 {
-        description SAVEFIX-C-vjunos-switch;
+        description "A to-xrv9k";
+        unit 0 {
+            family inet {
+                address 10.0.34.0/31;
+            }
+        }
     }
     fxp0 {
         unit 0 {
@@ -44,6 +57,19 @@ interfaces {
                 address 2001:db8::2/64;
             }
         }
+    }
+    lo0 {
+        unit 0 {
+            description "A loopback";
+            family inet {
+                address 10.255.0.3/32;
+            }
+        }
+    }
+}
+policy-options {
+    prefix-list RESTORE-A {
+        10.255.0.0/24;
     }
 }
 routing-instances {
@@ -56,6 +82,27 @@ routing-instances {
             }
             static {
                 route 0.0.0.0/0 next-hop 10.0.0.2;
+            }
+        }
+    }
+}
+routing-options {
+    router-id 10.255.0.3;
+    static {
+        route 192.0.2.3/32 discard;
+    }
+}
+protocols {
+    ospf {
+        area 0.0.0.0 {
+            interface ge-0/0/0.0 {
+                interface-type p2p;
+            }
+            interface ge-0/0/1.0 {
+                interface-type p2p;
+            }
+            interface lo0.0 {
+                passive;
             }
         }
     }

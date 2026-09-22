@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "059c4a81299b444ab7da3bdbf91b40e9",
-  "captured_at": "2026-09-22T15:00:14.470948+00:00",
+  "backup_job_id": "ef9e58e417214ad4bbaa859c28bf9cb2",
+  "captured_at": "2026-09-22T15:52:20.178230+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -11,11 +11,11 @@
       "restore_artifact": "ceos.eoscfg",
       "restore_capable": true,
       "restore_format": "eos-running-config",
-      "restore_sha256": "0df400b1d18be867319b47a8c86001bd61eab3c9a1f37c4b9689fd5e6db6476e",
-      "restore_size": 1021,
-      "sha256": "0df400b1d18be867319b47a8c86001bd61eab3c9a1f37c4b9689fd5e6db6476e",
+      "restore_sha256": "eb7e652ecad173097f58c4d6cdd6073a612ee326776ffdaf8fea319a620c4cdf",
+      "restore_size": 1529,
+      "sha256": "eb7e652ecad173097f58c4d6cdd6073a612ee326776ffdaf8fea319a620c4cdf",
       "short_name": "ceos",
-      "size": 1021
+      "size": 1529
     },
     {
       "format": "junos-display-set",
@@ -25,11 +25,11 @@
       "restore_artifact": "cjunosevolved.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "0d90e6bdc42134f6746c4fdd31e2fd6fbbc3c4e3910e7d46ff15690d87a61555",
-      "restore_size": 910,
-      "sha256": "d7359b8b1f76aa188b00e3338be1a3ac6f14f0d1c4c46cc1d08d0d77ad99f271",
+      "restore_sha256": "2920c0982bbf68414c24ed9b4303260cab09558165705a2205b7b0a4f6b2e0bf",
+      "restore_size": 1917,
+      "sha256": "049da592c7482c5e879f8d6bb58c270c4d6ff383ee71feac0a12c6c2861640e2",
       "short_name": "cjunosevolved",
-      "size": 615
+      "size": 1400
     },
     {
       "format": "junos-display-set",
@@ -39,11 +39,11 @@
       "restore_artifact": "vjunos-switch.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "2ee7ae578abbfb840feff10f711cdd96a56b0bcd423c261807fca4f2f6e573ed",
-      "restore_size": 1411,
-      "sha256": "345f51a48927b3d2a282d59acafee97e0b9cec593fa21134a7b3b44dca315abf",
+      "restore_sha256": "a9e5a17eabe04b349e634ef9ed74ba998a4df817130bcd908692778fc7a469e0",
+      "restore_size": 2313,
+      "sha256": "d635c1d91f640a2b4016a6fd5d4fa8fe77cad612c94d319b0a6101bbedc0b74e",
       "short_name": "vjunos-switch",
-      "size": 984
+      "size": 1619
     },
     {
       "format": "iosxr-running-config",
@@ -53,11 +53,11 @@
       "restore_artifact": "xrv9k.xrcfg",
       "restore_capable": true,
       "restore_format": "iosxr-running-config",
-      "restore_sha256": "05db2b4a6fdde739141429d0c44dc5f8fd5770ba361cd255d1d05fb50ee66fc7",
-      "restore_size": 1005,
-      "sha256": "05db2b4a6fdde739141429d0c44dc5f8fd5770ba361cd255d1d05fb50ee66fc7",
+      "restore_sha256": "f6311f103a160aeb981af1eb740509bc2577e3bcd42998d37b6c4de5ae2b8b57",
+      "restore_size": 1507,
+      "sha256": "f6311f103a160aeb981af1eb740509bc2577e3bcd42998d37b6c4de5ae2b8b57",
       "short_name": "xrv9k",
-      "size": 1005
+      "size": 1507
     }
   ],
   "lab_id": "904a35a79dc341ce8a4638f83fc34185",
