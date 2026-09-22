@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "fcb5e5e1878d4a41931592781a1c64ef",
-  "captured_at": "2026-09-22T14:17:19.531637+00:00",
+  "backup_job_id": "54683c9e84eb4e9ab82e4940061b73c6",
+  "captured_at": "2026-09-22T14:17:28.756392+00:00",
   "excluded_nodes": [],
   "files": [
     {
@@ -11,9 +11,9 @@
       "restore_artifact": "ceos.eoscfg",
       "restore_capable": true,
       "restore_format": "eos-running-config",
-      "restore_sha256": "ae2a7df046943a21c3e718163535170170a7fd856cdf484ec36ed5d6c8fd54d7",
+      "restore_sha256": "e93fb6944c8699accdb3ca6ed12061107af14d8009555700216bc8729f9ba617",
       "restore_size": 1001,
-      "sha256": "ae2a7df046943a21c3e718163535170170a7fd856cdf484ec36ed5d6c8fd54d7",
+      "sha256": "e93fb6944c8699accdb3ca6ed12061107af14d8009555700216bc8729f9ba617",
       "short_name": "ceos",
       "size": 1001
     },
