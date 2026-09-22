@@ -1,0 +1,75 @@
+{
+  "backup_job_id": "e250e6849c5c44e39b484b09c6099836",
+  "captured_at": "2026-09-22T14:59:43.642821+00:00",
+  "excluded_nodes": [],
+  "files": [
+    {
+      "format": "eos-running-config",
+      "node": "clab-restore-square-ceos",
+      "path": "ceos.cfg",
+      "platform": "arista_ceos",
+      "restore_artifact": "ceos.eoscfg",
+      "restore_capable": true,
+      "restore_format": "eos-running-config",
+      "restore_sha256": "ed48bd095b6a112c67fd70f1397190e17b83df8979b532260d255712e9eba530",
+      "restore_size": 1073,
+      "sha256": "ed48bd095b6a112c67fd70f1397190e17b83df8979b532260d255712e9eba530",
+      "short_name": "ceos",
+      "size": 1073
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-restore-square-cjunosevolved",
+      "path": "cjunosevolved.set",
+      "platform": "juniper_cjunosevolved",
+      "restore_artifact": "cjunosevolved.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "8c05fab568c4c2e9ef8d6d4dfce1f869a53f0905bee756142250e808b5ada1d0",
+      "restore_size": 1051,
+      "sha256": "f30b31ae27474401f7ca3ab9350f4da6765ed007f9d9e8b8be485e6bc37a4ee6",
+      "short_name": "cjunosevolved",
+      "size": 714
+    },
+    {
+      "format": "junos-display-set",
+      "node": "clab-restore-square-vjunos-switch",
+      "path": "vjunos-switch.set",
+      "platform": "juniper_vjunosswitch",
+      "restore_artifact": "vjunos-switch.jcfg",
+      "restore_capable": true,
+      "restore_format": "junos-hierarchical",
+      "restore_sha256": "c30977988173492014ed98c05244fcc5fae00a0f1c1f474a447535c2265daa11",
+      "restore_size": 1524,
+      "sha256": "faca66a3793dd3cc9963d7145525319b800d530b4a185a2d7e5826c10a058d52",
+      "short_name": "vjunos-switch",
+      "size": 1055
+    },
+    {
+      "format": "iosxr-running-config",
+      "node": "clab-restore-square-xrv9k",
+      "path": "xrv9k.cfg",
+      "platform": "cisco_xrv9k",
+      "restore_artifact": "xrv9k.xrcfg",
+      "restore_capable": true,
+      "restore_format": "iosxr-running-config",
+      "restore_sha256": "e16f6b53f078f1d75d31715a17fe07aeda89bce1fde31dcb049731918d9d234c",
+      "restore_size": 1113,
+      "sha256": "e16f6b53f078f1d75d31715a17fe07aeda89bce1fde31dcb049731918d9d234c",
+      "short_name": "xrv9k",
+      "size": 1113
+    }
+  ],
+  "lab_id": "904a35a79dc341ce8a4638f83fc34185",
+  "lab_name": "restore-square",
+  "node_names": [
+    "clab-restore-square-ceos",
+    "clab-restore-square-cjunosevolved",
+    "clab-restore-square-vjunos-switch",
+    "clab-restore-square-xrv9k"
+  ],
+  "restore_capable_nodes": 4,
+  "schema": 2,
+  "topology_digest": "8d12d7a9020b9b933c086f1fb3599395ad17a9491355fa789831e2eeb48663f3",
+  "topology_provenance": "captured"
+}
