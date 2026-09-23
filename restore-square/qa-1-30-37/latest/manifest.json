@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "c147eb6810e544b2a7329e0ffe3c1e62",
-  "captured_at": "2026-09-23T12:54:45.648596+00:00",
+  "backup_job_id": "e4a12011d7e04e6193097460be2cf95d",
+  "captured_at": "2026-09-23T13:13:03.491803+00:00",
   "excluded_nodes": [
     "clab-restore-square-host1"
   ],
@@ -13,11 +13,11 @@
       "restore_artifact": "ceos.eoscfg",
       "restore_capable": true,
       "restore_format": "eos-running-config",
-      "restore_sha256": "f251eb35452037fb17371335cbd3db2555b782dbe698198b40c3416cc0810ee3",
-      "restore_size": 1519,
-      "sha256": "f251eb35452037fb17371335cbd3db2555b782dbe698198b40c3416cc0810ee3",
+      "restore_sha256": "13953385f1afc566b0a59b39c118cf6df2fc0592ef13f3e7469835a0bbeaa6cc",
+      "restore_size": 1529,
+      "sha256": "13953385f1afc566b0a59b39c118cf6df2fc0592ef13f3e7469835a0bbeaa6cc",
       "short_name": "ceos",
-      "size": 1519
+      "size": 1529
     },
     {
       "format": "junos-display-set",
@@ -27,7 +27,7 @@
       "restore_artifact": "cjunosevolved.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "2b2d55a44074ce4a587572b3c68711d15c8861bb945a1adc1efc2eff8e99d87c",
+      "restore_sha256": "f3c9f25a5a0db12b64a2f72e1debbb2b9c02b7b15165268271962e2a7ecd3f4e",
       "restore_size": 1917,
       "sha256": "049da592c7482c5e879f8d6bb58c270c4d6ff383ee71feac0a12c6c2861640e2",
       "short_name": "cjunosevolved",
@@ -41,7 +41,7 @@
       "restore_artifact": "vjunos-switch.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "6c155d55e44bf3b4e5a67b1d76254b8c6865792aa4403c42991039601f7508be",
+      "restore_sha256": "8e953c083aac12bebb3a9dbaf5d638f0bb4317fa01508db52cedfc76597e27b6",
       "restore_size": 2313,
       "sha256": "b32e5160f90c6df3aafb71e35d301c38665b8c88a31342f98b30a8747ea582cb",
       "short_name": "vjunos-switch",
@@ -55,11 +55,11 @@
       "restore_artifact": "xrv9k.xrcfg",
       "restore_capable": true,
       "restore_format": "iosxr-running-config",
-      "restore_sha256": "0c9c2628cc4eadd879d4b7a1fc8d5c269d9513e694f4caa7eb60fbd230a95050",
-      "restore_size": 1559,
-      "sha256": "0c9c2628cc4eadd879d4b7a1fc8d5c269d9513e694f4caa7eb60fbd230a95050",
+      "restore_sha256": "5a6036b3e0f3961e888ef4b0f5ac098beba7f5cf720ea4485c190c54828c62b4",
+      "restore_size": 1507,
+      "sha256": "5a6036b3e0f3961e888ef4b0f5ac098beba7f5cf720ea4485c190c54828c62b4",
       "short_name": "xrv9k",
-      "size": 1559
+      "size": 1507
     }
   ],
   "lab_id": "174386ec12ee496190c585c5796b2662",
