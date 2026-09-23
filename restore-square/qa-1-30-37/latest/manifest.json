@@ -1,6 +1,6 @@
 {
-  "backup_job_id": "a088a66e81ed4787a1c7908333bf0d5e",
-  "captured_at": "2026-09-23T02:47:21.147548+00:00",
+  "backup_job_id": "10b3184043054cf1adc45bef6279f384",
+  "captured_at": "2026-09-23T11:27:36.412810+00:00",
   "excluded_nodes": [
     "clab-restore-square-host1"
   ],
@@ -27,11 +27,11 @@
       "restore_artifact": "cjunosevolved.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "3c909af1f524ccfada4bc16404b40b231502c2351e12f587971b95d964e058f0",
-      "restore_size": 1870,
-      "sha256": "5411e2d155dce4f1bd12c26bdac455457c190d97eb55ada294cd470144ce57d8",
+      "restore_sha256": "2b2d55a44074ce4a587572b3c68711d15c8861bb945a1adc1efc2eff8e99d87c",
+      "restore_size": 1917,
+      "sha256": "049da592c7482c5e879f8d6bb58c270c4d6ff383ee71feac0a12c6c2861640e2",
       "short_name": "cjunosevolved",
-      "size": 1306
+      "size": 1400
     },
     {
       "format": "junos-display-set",
@@ -41,11 +41,11 @@
       "restore_artifact": "vjunos-switch.jcfg",
       "restore_capable": true,
       "restore_format": "junos-hierarchical",
-      "restore_sha256": "06386e4ac109110fa4ad271a6eb5b87299ad697eceb7ab3b76cc7cd1fdeed0f8",
-      "restore_size": 2355,
-      "sha256": "c5ac63cba3ef2339e823ac7e07992997d7e3aca951c0f4295c428ff8a7355cca",
+      "restore_sha256": "6c155d55e44bf3b4e5a67b1d76254b8c6865792aa4403c42991039601f7508be",
+      "restore_size": 2313,
+      "sha256": "b32e5160f90c6df3aafb71e35d301c38665b8c88a31342f98b30a8747ea582cb",
       "short_name": "vjunos-switch",
-      "size": 1639
+      "size": 1619
     },
     {
       "format": "iosxr-running-config",
@@ -55,9 +55,9 @@
       "restore_artifact": "xrv9k.xrcfg",
       "restore_capable": true,
       "restore_format": "iosxr-running-config",
-      "restore_sha256": "9f20f92824b0f113e6a6b2cfa0f811a6910173f86fb646e18bbbdc7aa89a03f1",
+      "restore_sha256": "0c9c2628cc4eadd879d4b7a1fc8d5c269d9513e694f4caa7eb60fbd230a95050",
       "restore_size": 1559,
-      "sha256": "9f20f92824b0f113e6a6b2cfa0f811a6910173f86fb646e18bbbdc7aa89a03f1",
+      "sha256": "0c9c2628cc4eadd879d4b7a1fc8d5c269d9513e694f4caa7eb60fbd230a95050",
       "short_name": "xrv9k",
       "size": 1559
     }
