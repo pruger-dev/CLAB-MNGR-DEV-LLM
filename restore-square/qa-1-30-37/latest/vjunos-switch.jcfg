@@ -1,4 +1,4 @@
-## Last commit: 2026-09-23 01:24:34 UTC by admin
+## Last commit: 2026-09-23 02:46:37 UTC by admin
 version 23.2R1.14;
 system {
     host-name vjunos-switch;
@@ -33,7 +33,7 @@ chassis {
 }
 interfaces {
     ge-0/0/0 {
-        description "A to-cjunosevolved";
+        description "B changed";
         unit 0 {
             family inet {
                 address 10.0.23.1/31;
@@ -68,6 +68,9 @@ interfaces {
     }
 }
 policy-options {
+    prefix-list B-ONLY {
+        198.51.100.0/24;
+    }
     prefix-list RESTORE-A {
         10.255.0.0/24;
     }
@@ -88,9 +91,6 @@ routing-instances {
 }
 routing-options {
     router-id 10.255.0.3;
-    static {
-        route 192.0.2.3/32 discard;
-    }
 }
 protocols {
     ospf {
@@ -105,5 +105,10 @@ protocols {
                 passive;
             }
         }
+    }
+}
+vlans {
+    B-ONLY {
+        vlan-id 777;
     }
 }
