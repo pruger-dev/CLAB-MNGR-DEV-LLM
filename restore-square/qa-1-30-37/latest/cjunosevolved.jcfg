@@ -1,0 +1,86 @@
+## Last commit: 2026-09-23 01:24:20 UTC by admin
+version 26.2R1.7-EVO;
+system {
+    host-name HOSTNAME;
+    login {
+        user admin {
+            uid 500;
+            class superuser;
+            authentication {
+                encrypted-password "$6$9YSzwiCD$ZiMI1N.5fcWCe5fH8hZz/FtISY4K8QKjv9p0w6Hkyct71ke1bn3OQQk0oi7/l5Sn8yP1CClO9CeGSMpNQcFjT/"; ## SECRET-DATA
+            }
+        }
+    }
+    syslog {
+        file interactive-commands {
+            interactive-commands any;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+    }
+    services {
+        ssh;
+    }
+    ## Warning: missing mandatory statement(s): 'root-authentication'
+}
+interfaces {
+    et-0/0/0 {
+        description "A to-ceos";
+        unit 0 {
+            family inet {
+                address 10.0.12.1/31;
+            }
+        }
+    }
+    et-0/0/1 {
+        description "A to-vjunos-switch";
+        unit 0 {
+            family inet {
+                address 10.0.23.0/31;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            description "A loopback";
+            family inet {
+                address 10.255.0.2/32;
+            }
+        }
+    }
+    re0:mgmt-0 {
+        unit 0 {
+            family inet {
+                address 172.20.20.102/24;
+            }
+        }
+    }
+}
+policy-options {
+    prefix-list RESTORE-A {
+        10.255.0.0/24;
+    }
+}
+routing-options {
+    router-id 10.255.0.2;
+    static {
+        route 192.0.2.2/32 discard;
+    }
+}
+protocols {
+    ospf {
+        area 0.0.0.0 {
+            interface et-0/0/0.0 {
+                interface-type p2p;
+            }
+            interface et-0/0/1.0 {
+                interface-type p2p;
+            }
+            interface lo0.0 {
+                passive;
+            }
+        }
+    }
+}
