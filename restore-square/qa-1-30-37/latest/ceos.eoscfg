@@ -39,7 +39,7 @@ interface Ethernet1
    ip ospf area 0.0.0.0
 !
 interface Ethernet2
-   description A to-xrv9k
+   description AUDIT-1-30-42
    no switchport
    ip address 10.0.41.1/31
    ip ospf network point-to-point
